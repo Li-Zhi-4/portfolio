@@ -1,24 +1,99 @@
 import { Button } from "@/components/ui/button"
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselNext,
+    CarouselPrevious,
+} from "@/components/ui/carousel"
+import {
+    Card,
+    CardAction,
+    CardContent,
+    CardDescription,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+} from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
 import { ArrowRight } from "lucide-react"
+
+import { TitleSection } from "@/components/TitleSection"
+import genedetek from '/src/assets/genedetek.jpg'
 
 export function HomePage() {
 
     return (
-        <div className="flex justify-center items-center px-6 py-6 sm:px-16 sm:py-16 box-border w-screen h-screen bg-[url(src/assets/hero-background.png)] bg-cover bg-center bg-no-repeat">
-            <div className="flex flex-col gap-12 w-3xl">
-                <div className="flex flex-col w-full h-fit">
-                    <span className="text-neutral-500 tracking-widest font-semibold">HELLO, MY NAME IS</span>
-                    <h1 className="font-bold text-4xl sm:text-5xl md:text-6xl bg-linear-to-r from-neutral-800 to-sky-600 bg-clip-text text-transparent">Sara Thompson</h1>
-                    <p className="pt-3 text-neutral-500 text-xl sm:text-2xl font-light">I’m a frontend designer and UX designer blending thoughtful design with code to create intuitive, user-centered digital experiences.</p>
-                </div>
-                <div className="flex flex-row gap-4">
-                    <Button variant="default" className="bg-linear-to-r from-sky-700 to-sky-500">See projects</Button>
-                    <Button variant="link" className="text-sky-600">
-                        See my resume
-                        <ArrowRight />
-                    </Button>
+        <div>
+            {/* Hero Section */}
+            <div className="flex justify-center items-center px-6 py-6 sm:px-16 sm:py-16 box-border w-screen h-screen bg-[url(src/assets/hero-background.png)] bg-cover bg-center bg-no-repeat">
+                <div className="flex flex-col gap-12 w-3xl">
+                    <div className="flex flex-col w-full h-fit">
+                        <span className="text-neutral-500 tracking-widest font-semibold">HELLO, MY NAME IS</span>
+                        <h1 className="font-bold text-4xl sm:text-5xl md:text-6xl bg-linear-to-r from-neutral-800 to-sky-600 bg-clip-text text-transparent">Sara Thompson</h1>
+                        <p className="pt-3 text-neutral-500 text-xl sm:text-2xl font-light">I’m a frontend designer and UX designer blending thoughtful design with code to create intuitive, user-centered digital experiences.</p>
+                    </div>
+                    <div className="flex flex-row gap-4">
+                        <Button variant="default" className="bg-linear-to-r from-sky-600 to-sky-500">See projects</Button>
+                        <Button variant="link" className="text-sky-600">
+                            See my resume
+                            <ArrowRight />
+                        </Button>
+                    </div>
                 </div>
             </div>
+
+            <div className="flex flex-col gap-16 justify-center py-6 px-6 sm:py-16 sm:px-16 w-screen h-fit sm:h-screen bg-linear-to-b from-sky-50 to-white">
+                <TitleSection 
+                    descriptor="Featured" 
+                    title="Projects" 
+                    description="This is a description of this section which is about projects, huzzah!"
+                />
+
+                <div className="flex flex-col items-center justify-center h-full w-full">
+                    <Carousel className="w-xs sm:w-md">
+                        <CarouselContent className="h-fit">
+                            <CarouselItem key="1">
+                                <Card className="gap-0 p-0">
+                                    <img src={genedetek} alt="genedetek poster" className="object-contain object-cover rounded-[13px]" />
+                                    <div className="py-6">
+                                        <CardHeader>
+                                            <span className="text-neutral-500 tracking-widest font-semibold text-xs">CAPSTONE PROJECT</span>
+                                            <CardTitle className="text-neutral-800 font-semibold text-2xl">GeneDetek: Biosensor</CardTitle>
+                                        </CardHeader>
+                                        <CardContent className="pt-1">
+                                            <CardDescription>Built and tested an electrochemical biosensor for detecting genetic mutations affecting SSRI drug uptake.</CardDescription>
+                                            <div className="pt-2">
+                                                <Badge variant="default">Badge</Badge>
+                                            </div>
+                                        </CardContent>
+                                        <CardFooter className="pt-6">
+                                            <div className="flex flex-row gap-4 box-border w-full">
+                                                <Button variant="default" className="bg-linear-to-r from-sky-600 to-sky-500">See GitHub</Button>
+                                                <Button variant="link" className="text-sky-600">
+                                                    Go to site
+                                                    <ArrowRight />
+                                                </Button>
+                                            </div>
+                                        </CardFooter>
+                                    </div>
+                                </Card>
+                            </CarouselItem>
+                        </CarouselContent>
+
+                        {/* Buttons for Carousel */}
+                        <div className="sm:hidden flex flex-row gap-4 pt-4 justify-center items-center w-full">
+                            <CarouselPrevious className="relative left-0 right-0 translate-x-0 translate-y-0"/>
+                            <CarouselNext className="relative left-0 right-0 translate-x-0 translate-y-0"/>
+                        </div>
+                        <div className="hidden sm:flex">
+                            <CarouselPrevious />
+                            <CarouselNext />
+                        </div>
+                    </Carousel>
+                </div>
+            </div>
+
         </div>
     )
 }
