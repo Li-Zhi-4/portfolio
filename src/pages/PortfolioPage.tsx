@@ -9,22 +9,24 @@ import { Footer } from "@/components/Footer"
 import divider from '/src/assets/divider.png'
 
 import geneDetek from '/src/assets/genedetek.jpg'
+import customFormBuilder from '/src/assets/custom-form-builder.svg'
+import qualificationWorkflows from '/src/assets/qualification-workflows.avif'
 
 const PROJECTS = [
     {
-        image: "",
+        image: geneDetek,
         descriptor: "Capstone Project",
         title: "GeneDetek: Biosensor",
         link: ""
     },
     {
-        image: "",
+        image: qualificationWorkflows,
         descriptor: "Product & UX Design",
         title: "Qualification Workflows",
         link: ""
     },
     {
-        image: "",
+        image: customFormBuilder,
         descriptor: "UX Design",
         title: "Custom Form Builder",
         link: ""
@@ -46,8 +48,8 @@ export function PortfolioPage() {
         </div>
 
         {/* Divider Section */}
-        <div className="w-screen">
-            <img src={divider} alt="divider" className="w-screen"/>
+        <div className="w-screen overflow-hidden">
+            <img src={divider} alt="divider" className="w-[1920px] max-w-none"/>
         </div>
 
         {/* Project Section */}
@@ -55,7 +57,7 @@ export function PortfolioPage() {
             {Object.entries(PROJECTS).map( ([key, value]) => (
                 <Link to="/" className="h-full w-full rounded-xl shadow-md transition duration-300 ease-in-out transform hover:scale-[1.02] hover:shadow-xl">
                     <Card key={key} className="gap-0 p-0 h-full w-full cursor-pointer">
-                        <img src={geneDetek} alt="genedetek poster" className="object-contain object-cover rounded-[13px] h-[250px]" />
+                        <img src={value.image} alt="genedetek poster" className="object-contain object-cover rounded-[13px] h-[250px]" />
                         <div className="py-6">
                             <CardHeader className="gap-0">
                                 <span className="text-neutral-500 tracking-widest font-semibold text-xs">{value.descriptor.toUpperCase()}</span>

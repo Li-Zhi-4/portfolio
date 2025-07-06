@@ -94,8 +94,8 @@ export function AboutPage() {
             </div>
 
             {/* Divider Section */}
-            <div className="w-screen">
-                <img src={divider} alt="divider" className="w-screen"/>
+            <div className="w-screen overflow-hidden">
+                <img src={divider} alt="divider" className="w-[1920px] max-w-none"/>
             </div>
 
             {/* Information Section */}
