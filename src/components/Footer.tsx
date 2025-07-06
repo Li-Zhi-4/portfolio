@@ -4,8 +4,7 @@ import {
     NavigationMenuList,
 } from "@/components/ui/navigation-menu"
 import { Button } from "@/components/ui/button"
-
-
+import { Link } from "react-router-dom"
 
 import footerImg from '/src/assets/footer.png'
 
@@ -20,22 +19,22 @@ export function Footer() {
                     <NavigationMenuList>
                         <NavigationMenuItem>
                             <Button variant="link" className="text-sky-50" asChild>
-                                <a href="">Home</a>
+                                <Link to="/">Home</Link>
                             </Button>
                         </NavigationMenuItem>
                         <NavigationMenuItem>
                             <Button variant="link" className="text-sky-50" asChild>
-                                <a href="">Projects</a>
+                                <Link to="/">Projects</Link>
                             </Button>
                         </NavigationMenuItem>
                         <NavigationMenuItem>
                             <Button variant="link" className="text-sky-50" asChild>
-                                <a href="">About</a>
+                                <Link to="/about">About</Link>
                             </Button>
                         </NavigationMenuItem>
                         <NavigationMenuItem>
                             <Button variant="link" className="text-sky-50" asChild>
-                                <a href="">Contact</a>
+                                <Link to="/">Contact</Link>
                             </Button>
                         </NavigationMenuItem>
                     </NavigationMenuList>

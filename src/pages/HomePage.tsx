@@ -47,9 +47,9 @@ const FEATURED_CARDS = [
 export function HomePage() {
 
     return (
-        <div className="w-screen">
+        <div className="w-screen overflow-y-scroll snap-y h-screen scroll-smooth">
             {/* Hero Section */}
-            <div className="flex justify-center items-center px-6 py-6 sm:px-16 sm:py-16 box-border w-screen h-screen bg-[url(src/assets/hero-background-1.png)] bg-cover bg-center bg-no-repeat">
+            <div className="flex justify-center items-center px-6 py-6 sm:px-16 sm:py-16 box-border w-screen h-screen snap-start bg-[url(src/assets/hero-background-1.png)] bg-cover bg-center bg-no-repeat">
                 <div className="flex flex-col gap-12 w-3xl">
                     <div className="flex flex-col w-full h-fit">
                         <span className="text-neutral-500 tracking-widest font-semibold">HELLO, MY NAME IS</span>
@@ -67,7 +67,7 @@ export function HomePage() {
             </div>
 
             {/* Featured Section */}
-            <div className="flex flex-col gap-16 justify-center items-center py-6 px-6 sm:py-16 sm:px-16 w-screen h-fit sm:h-screen bg-linear-to-b from-sky-50 to-white">
+            <div className="flex flex-col gap-16 justify-center items-center py-6 px-6 sm:py-16 sm:px-16 w-screen h-screen snap-start sm:h-screen bg-linear-to-b from-sky-50 to-white">
                 <div className="max-w-[768px]">
                     <TitleSection
                         descriptor="Featured"
@@ -128,7 +128,9 @@ export function HomePage() {
             </div>
             
             {/* Footer Section */}
-            <Footer />
+            <div className="h-fit snap-start">
+                <Footer />
+            </div>
         </div>
     )
 }
