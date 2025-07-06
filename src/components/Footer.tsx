@@ -24,7 +24,7 @@ export function Footer() {
                         </NavigationMenuItem>
                         <NavigationMenuItem>
                             <Button variant="link" className="text-sky-50" asChild>
-                                <Link to="/">Projects</Link>
+                                <Link to="/portfolio">Projects</Link>
                             </Button>
                         </NavigationMenuItem>
                         <NavigationMenuItem>

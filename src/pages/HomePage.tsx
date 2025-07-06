@@ -15,6 +15,7 @@ import {
     CardTitle,
 } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { Link } from "react-router-dom"
 import { ArrowRight } from "lucide-react"
 
 import { TitleSection } from "@/components/TitleSection"
@@ -57,7 +58,9 @@ export function HomePage() {
                         <p className="pt-6 text-neutral-500 text-xl sm:text-2xl font-light">I’m a frontend designer and UX designer blending thoughtful design with code to create intuitive, user-centered digital experiences.</p>
                     </div>
                     <div className="flex flex-row gap-4">
-                        <Button variant="default" className="bg-linear-to-r from-sky-600 to-sky-500">See projects</Button>
+                        <Button variant="default" className="bg-linear-to-r from-sky-600 to-sky-500">
+                            <Link to="/portfolio">See projects</Link>
+                        </Button>
                         <Button variant="link" className="text-sky-600">
                             See my resume
                             <ArrowRight />
@@ -84,7 +87,7 @@ export function HomePage() {
                                     <Card className="gap-0 p-0">
                                         <img src={value.image} alt="genedetek poster" className="object-contain object-cover rounded-[13px] h-[250px]" />
                                         <div className="py-6">
-                                            <CardHeader>
+                                            <CardHeader className="gap-0">
                                                 <span className="text-neutral-500 tracking-widest font-semibold text-xs">{value.descriptor.toUpperCase()}</span>
                                                 <CardTitle className="text-neutral-800 font-semibold text-2xl">{value.title}</CardTitle>
                                             </CardHeader>

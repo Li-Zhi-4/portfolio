@@ -99,7 +99,7 @@ export function AboutPage() {
             </div>
 
             {/* Information Section */}
-            <div className="flex flex-col gap-6 justify-center items-center w-full p-16">
+            <div className="flex flex-col gap-6 justify-center items-center w-full px-6 py-16 sm:p-16">
                 {/* Education Section */}
                 <div className="w-full max-w-3xl">
                     <h2 className="text-4xl font-bold text-neutral-800">Education</h2>
