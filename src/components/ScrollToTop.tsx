@@ -7,7 +7,15 @@ export function ScrollToTop() {
 
 
     useEffect(() => {
-        window.scrollTo({ top: 0, behavior: currentPage === pathname ? "smooth" : "instant" });
+        const container = document.getElementById("hero");
+        if (container) {
+            container.scrollTo({ top: 0, behavior: currentPage === pathname ? "smooth" : "instant" });
+        } else {
+            window.scrollTo({
+                top: 0,
+                behavior: currentPage === pathname ? "smooth" : "auto",
+            });
+        }
         setCurrentPage(pathname)
     }, [key]);
 
