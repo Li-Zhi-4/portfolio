@@ -8,7 +8,6 @@ import {
 } from "@/components/ui/carousel"
 import {
     Card,
-    CardAction,
     CardContent,
     CardDescription,
     CardFooter,
