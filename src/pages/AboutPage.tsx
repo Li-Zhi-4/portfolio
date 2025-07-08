@@ -1,5 +1,6 @@
 
 import { TitleSection } from "@/components/TitleSection"
+import { FloatingNavigationBar, NavigationBar } from "@/components/NavigationBar"
 import { Footer } from "@/components/Footer"
 import divider from '/src/assets/divider.png'
 
@@ -83,6 +84,8 @@ export function AboutPage() {
 
     return (
         <div className="w-screen">
+            <NavigationBar />
+
             {/* Title Section */}
             <div className="flex flex-col gap-16 justify-center items-center py-6 px-6 sm:py-16 sm:px-16 w-screen h-[480px] bg-linear-to-b from-sky-50 to-white">
                 <div className="max-w-[768px]">

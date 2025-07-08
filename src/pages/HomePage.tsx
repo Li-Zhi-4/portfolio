@@ -18,6 +18,7 @@ import { Badge } from "@/components/ui/badge"
 import { Link } from "react-router-dom"
 import { ArrowRight } from "lucide-react"
 
+import { FloatingNavigationBar, NavigationBar } from "@/components/NavigationBar"
 import { TitleSection } from "@/components/TitleSection"
 import { Footer } from "@/components/Footer"
 import genedetek from '/src/assets/genedetek.jpg'
@@ -49,6 +50,8 @@ export function HomePage() {
 
     return (
         <div id="hero" className="w-screen overflow-y-scroll snap-y h-screen scroll-smooth">
+            <NavigationBar />
+            
             {/* Hero Section */}
             <div className="flex justify-center items-center px-6 py-6 sm:px-16 sm:py-16 box-border w-screen h-screen snap-start bg-[url(src/assets/hero-background-1.png)] bg-cover bg-center bg-no-repeat">
                 <div className="flex flex-col gap-12 w-3xl">
