@@ -38,8 +38,8 @@ export function PortfolioPage() {
 
     return (
       <div className="w-screen">
-        <NavigationBar />
-        
+        <FloatingNavigationBar />
+
         {/* Title Section */}
         <div className="flex flex-col gap-16 justify-center items-center py-6 px-6 sm:py-16 sm:px-16 w-screen h-[480px] bg-linear-to-b from-sky-50 to-white">
             <div className="max-w-[768px]">
@@ -58,8 +58,8 @@ export function PortfolioPage() {
         {/* Project Section */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 box-border justify-center items-center w-full p-6 sm:p-16">
             {Object.entries(PROJECTS).map( ([key, value]) => (
-                <Link to="/" className="h-full w-full rounded-xl shadow-md transition duration-300 ease-in-out transform hover:scale-[1.02] hover:shadow-xl">
-                    <Card key={key} className="gap-0 p-0 h-full w-full cursor-pointer">
+                <Link to="/" key={key} className="h-full w-full rounded-xl shadow-md transition duration-300 ease-in-out transform hover:scale-[1.02] hover:shadow-xl">
+                    <Card className="gap-0 p-0 h-full w-full cursor-pointer">
                         <img src={value.image} alt="genedetek poster" className="object-contain object-cover rounded-[13px] h-[250px]" />
                         <div className="py-6">
                             <CardHeader className="gap-0">

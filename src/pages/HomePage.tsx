@@ -50,7 +50,7 @@ export function HomePage() {
 
     return (
         <div id="hero" className="w-screen overflow-y-scroll snap-y h-screen scroll-smooth">
-            <NavigationBar />
+            <FloatingNavigationBar />
             
             {/* Hero Section */}
             <div className="flex justify-center items-center px-6 py-6 sm:px-16 sm:py-16 box-border w-screen h-screen snap-start bg-[url(src/assets/hero-background-1.png)] bg-cover bg-center bg-no-repeat">

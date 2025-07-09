@@ -84,7 +84,7 @@ export function AboutPage() {
 
     return (
         <div className="w-screen">
-            <NavigationBar />
+            <FloatingNavigationBar />
 
             {/* Title Section */}
             <div className="flex flex-col gap-16 justify-center items-center py-6 px-6 sm:py-16 sm:px-16 w-screen h-[480px] bg-linear-to-b from-sky-50 to-white">
