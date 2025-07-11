@@ -99,7 +99,7 @@ export function HomePage() {
                             {Object.entries(FEATURED_CARDS).map( ([key,value]) => (
                                 <CarouselItem key={key}>
                                     <Card className="gap-0 p-0">
-                                        <img src={value.image} alt="genedetek poster" className="object-contain object-cover rounded-[13px] h-[250px]" />
+                                        <img src={value.image} alt="genedetek poster" className="hidden sm:flex object-contain object-cover rounded-[13px] sm:h-[250px]" />
                                         <div className="py-6">
                                             <CardHeader className="gap-0">
                                                 <span className="text-neutral-500 tracking-widest font-semibold text-xs">{value.descriptor.toUpperCase()}</span>
