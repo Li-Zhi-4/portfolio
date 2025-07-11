@@ -57,7 +57,7 @@ export function QualificationWorkflows() {
                         title="Problem Statement"
                         description={["General Contractors (GC) use their own custom forms to qualify subcontractors for projects. These forms request sensitive information and cannot be outsourced to general form builder platforms. We designed a secure, on-platform custom form builder to streamline project workflows and form management in one central place."]}
                     />
-                    <div className="flex flex-row gap-6 lg:w-3xl justify-between w-full">
+                    <div className="flex flex-col sm:flex-row gap-6 lg:w-3xl justify-between w-full">
                         <ContentSection
                             title="Role"
                             description={["Product Owner", "UX/UI Designer"]}
@@ -157,13 +157,13 @@ export function QualificationWorkflows() {
                 ))}
             </div>
 
-            <div className="flex flex-col gap-6 justify-center items-center w-screen h-screen px-6 py-16 sm:p-16">
+            <div className="flex flex-col gap-6 justify-center items-center w-screen h-fit sm:h-screen px-6 py-16 sm:p-16">
                 <div className="flex flex-col gap-16 justify-center items-center lg:w-3xl w-full h-fit">
                     <ContentSection
                         title="Designs to Production"
                         description={["After presenting the prototype, I assigned the feature to my dev team (Arrow team) and we organized the Jira Epic into our Kanban. My team estimated the amount of time it would take to implement the feature to production and set off on our sprint! Additionally, work on implementing annual workflows occurred concurrently with this stage."]}
                     />
-                    <div className="flex flex-row gap-6 lg:w-3xl justify-between w-full">
+                    <div className="flex flex-col sm:flex-row gap-6 lg:w-3xl justify-between w-full">
                         <ContentSection
                             title="Product Documentation"
                             description={["I wrote the product documentation and client facing documentation for these features. Additionally, I also demoed the prototype to our client success team so they were prepared for any questions from clients."]}

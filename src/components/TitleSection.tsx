@@ -10,7 +10,7 @@ export function TitleSection({ descriptor, title, description }: TitleSectionPro
     return (
         <div className="flex flex-col items-center w-full">
             <span className="text-sky-600 tracking-widest font-semibold">{descriptor.toUpperCase()}</span>
-            <h1 className="font-semibold text-4xl sm:text-5xl ">{title}</h1>
+            <h1 className="font-semibold text-4xl sm:text-5xl text-center">{title}</h1>
             <p className="pt-6 text-xl sm:text-2xl text-neutral-500 font-light text-center">{description}</p>
         </div>
     )
