@@ -21,10 +21,30 @@ import { ArrowRight } from "lucide-react"
 import { FloatingNavigationBar } from "@/components/NavigationBar"
 import { TitleSection } from "@/components/TitleSection"
 import { Footer } from "@/components/Footer"
+
 import genedetek from '/src/assets/genedetek.jpg'
 import customFormBuilder from '/src/assets/custom-form-builder.svg'
+import qualificationWorkflows from '/src/assets/QW-annual-quals-prototype.avif'
 
 const FEATURED_CARDS = [
+    {
+        image: qualificationWorkflows,
+        descriptor: "UX Design & Product Management",
+        title: "Qualification Workflows",
+        description: "Designed and delivered a custom qualification workflow feature for general contractors, digitizing the pre-qualification process.",
+        badges: ["Figma", "potato"],
+        button: ["See Project", "/portfolio/qualification-workflows"],
+        link_button: []
+    },    
+    {
+        image: customFormBuilder,
+        descriptor: "UX Design",
+        title: "Custom Form Builder",
+        description: "Designed initial form builder application for general contractors to streamline project workflows and form management.",
+        badges: ["Figma", "potato"],
+        button: ["See Project", "/portfolio/custom-forms"],
+        link_button: []
+    },
     {
         image: genedetek,
         descriptor: "Capstone Project",
@@ -34,15 +54,6 @@ const FEATURED_CARDS = [
         button: ["See Project", ""],
         link_button: ["See article", ""]
     },
-    {
-        image: customFormBuilder,
-        descriptor: "UX Design",
-        title: "Custom Form Builder",
-        description: "Designed initial form builder application for general contractors to streamline project workflows and form management.",
-        badges: ["Figma", "potato"],
-        button: ["See Project", ""],
-        link_button: []
-    }
 ]
 
 
@@ -53,7 +64,7 @@ export function HomePage() {
             <FloatingNavigationBar />
             
             {/* Hero Section */}
-            <div className="flex justify-center items-center px-6 py-6 sm:px-16 sm:py-16 box-border w-screen h-screen snap-start bg-[url(src/assets/hero-background-1.png)] bg-cover bg-center bg-no-repeat">
+            <div className="flex justify-center items-center px-6 py-6 sm:px-16 sm:py-16 box-border w-screen h-screen snap-start bg-[url(/src/assets/hero-background-1.png)] bg-cover bg-center bg-no-repeat">
                 <div className="flex flex-col gap-12 w-3xl">
                     <div className="flex flex-col w-full h-fit">
                         <span className="text-neutral-500 tracking-widest font-semibold">HELLO, MY NAME IS</span>
@@ -104,7 +115,9 @@ export function HomePage() {
                                             </CardContent>
                                             <CardFooter className="pt-6">
                                                 <div className="flex flex-row gap-4 box-border w-full">
-                                                    <Button variant="default" className="bg-linear-to-r from-sky-600 to-sky-500">{value.button[0]}</Button>
+                                                    <Button variant="default" className="bg-linear-to-r from-sky-600 to-sky-500">
+                                                        <Link to={value.button[1]}>{value.button[0]}</Link>
+                                                    </Button>
                                                     {value.link_button.length === 0 ? "" :
                                                         <Button variant="link" className="text-sky-600">
                                                             {value.link_button[0]}

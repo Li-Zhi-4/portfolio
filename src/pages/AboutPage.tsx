@@ -90,8 +90,8 @@ export function AboutPage() {
             <div className="flex flex-col gap-16 justify-center items-center py-6 px-6 sm:py-16 sm:px-16 w-screen h-[480px] bg-linear-to-b from-sky-50 to-white">
                 <div className="max-w-[768px]">
                     <TitleSection
-                        descriptor="About"
-                        title="Profile"
+                        descriptor="Get to know more"
+                        title="About Me"
                         description="This page highlights my educational background, the activities and organizations I’ve been involved with, and some of the awards I’ve received along the way."/>
                 </div>
             </div>

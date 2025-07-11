@@ -41,7 +41,7 @@ export function QualificationWorkflows() {
                     <TitleSection
                         descriptor="Bespoke Metrics"
                         title="Qualification Workflows"
-                        description="Led the design and delivery of a qualification workflow feature for Bespoke Metrics’ GC platform, transforming a client’s high-level request into a production-ready solution."/>
+                        description="Designed and delivered a custom qualification workflow feature for general contractors, digitizing the pre-qualification process."/>
                 </div>
             </div>
 
@@ -55,7 +55,7 @@ export function QualificationWorkflows() {
                 <div className="flex flex-col gap-6 justify-center items-center lg:w-3xl w-full h-fit">
                     <ContentSection
                         title="Problem Statement"
-                        description={["General Contractors (GC) use their own custom forms to qualify subcontractors for projects. These forms request sensitive information and cannot be outsourced to general form builder platforms. We designed a secure, on-platform custom form builder to streamline project workflows and form management in one central place."]}
+                        description={["General contractors (GCs) still rely on stacks of paper forms, phone calls, and spreadsheets to annually pre-qualify subcontractors—a time-consuming, error-prone process that holds projects up. To improve their efficiency on our qualification platform, we delivered a new feature that integrates custom GC qualification workflows while enabling automatic tracking of qualification processes and real-time status updates."]}
                     />
                     <div className="flex flex-col sm:flex-row gap-6 lg:w-3xl justify-between w-full">
                         <ContentSection

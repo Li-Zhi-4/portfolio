@@ -15,12 +15,6 @@ import qualificationWorkflows from '/src/assets/qualification-workflows.avif'
 
 const PROJECTS = [
     {
-        image: geneDetek,
-        descriptor: "Capstone Project",
-        title: "GeneDetek: Biosensor",
-        link: "/"
-    },
-    {
         image: qualificationWorkflows,
         descriptor: "Product & UX Design",
         title: "Qualification Workflows",
@@ -30,6 +24,12 @@ const PROJECTS = [
         image: customFormBuilder,
         descriptor: "UX Design",
         title: "Custom Form Builder",
+        link: "/portfolio/custom-forms"
+    },
+    {
+        image: geneDetek,
+        descriptor: "Capstone Project",
+        title: "GeneDetek: Biosensor",
         link: "/"
     },
 ]
@@ -44,8 +44,8 @@ export function PortfolioPage() {
         <div className="flex flex-col gap-16 justify-center items-center py-6 px-6 sm:py-16 sm:px-16 w-screen h-[480px] bg-linear-to-b from-sky-50 to-white">
             <div className="max-w-[768px]">
                 <TitleSection
-                    descriptor="Portfolio"
-                    title="Projects"
+                    descriptor="A Collection of Work"
+                    title="My Projects"
                     description="Explore my work, a collection of projects where I’ve applied design thinking, frontend development, and user research to solve real problems and create meaningful experiences."/>
             </div>
         </div>
