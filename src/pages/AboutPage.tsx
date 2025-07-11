@@ -1,6 +1,6 @@
 
 import { TitleSection } from "@/components/TitleSection"
-import { FloatingNavigationBar, NavigationBar } from "@/components/NavigationBar"
+import { FloatingNavigationBar } from "@/components/NavigationBar"
 import { Footer } from "@/components/Footer"
 import divider from '/src/assets/divider.png'
 

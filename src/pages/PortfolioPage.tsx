@@ -4,7 +4,7 @@ import {
     CardTitle,
 } from "@/components/ui/card"
 import { Link } from "react-router-dom"
-import { FloatingNavigationBar, NavigationBar } from "@/components/NavigationBar"
+import { FloatingNavigationBar } from "@/components/NavigationBar"
 import { TitleSection } from "@/components/TitleSection"
 import { Footer } from "@/components/Footer"
 import divider from '/src/assets/divider.png'
@@ -18,19 +18,19 @@ const PROJECTS = [
         image: geneDetek,
         descriptor: "Capstone Project",
         title: "GeneDetek: Biosensor",
-        link: ""
+        link: "/"
     },
     {
         image: qualificationWorkflows,
         descriptor: "Product & UX Design",
         title: "Qualification Workflows",
-        link: ""
+        link: "/portfolio/qualification-workflows"
     },
     {
         image: customFormBuilder,
         descriptor: "UX Design",
         title: "Custom Form Builder",
-        link: ""
+        link: "/"
     },
 ]
 
@@ -58,7 +58,7 @@ export function PortfolioPage() {
         {/* Project Section */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 box-border justify-center items-center w-full p-6 sm:p-16">
             {Object.entries(PROJECTS).map( ([key, value]) => (
-                <Link to="/" key={key} className="h-full w-full rounded-xl shadow-md transition duration-300 ease-in-out transform hover:scale-[1.02] hover:shadow-xl">
+                <Link to={value.link} key={key} className="h-full w-full rounded-xl shadow-md transition duration-300 ease-in-out transform hover:scale-[1.02] hover:shadow-xl">
                     <Card className="gap-0 p-0 h-full w-full cursor-pointer">
                         <img src={value.image} alt="genedetek poster" className="object-contain object-cover rounded-[13px] h-[250px]" />
                         <div className="py-6">

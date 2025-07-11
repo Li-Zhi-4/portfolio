@@ -1,14 +1,9 @@
 import { Separator } from "@/components/ui/separator"
 import {
     NavigationMenu,
-    NavigationMenuContent,
-    NavigationMenuIndicator,
     NavigationMenuItem,
     NavigationMenuLink,
     NavigationMenuList,
-    NavigationMenuTrigger,
-    NavigationMenuViewport,
-    navigationMenuTriggerStyle
 } from "@/components/ui/navigation-menu"
 import {
     Sheet,
@@ -18,14 +13,9 @@ import {
     SheetTitle,
     SheetTrigger,
 } from "@/components/ui/sheet"
-import {
-    Popover,
-    PopoverContent,
-    PopoverTrigger,
-} from "@/components/ui/popover"
 import { Button } from "@/components/ui/button"
 import { Link } from "react-router-dom"
-import { Github, Linkedin, Menu, ExternalLink } from "lucide-react"
+import { Github, Linkedin, Menu, ExternalLink, Home } from "lucide-react"
 
 
 function FloatingNavigationBar() {
@@ -37,6 +27,11 @@ function FloatingNavigationBar() {
             {/* Mobile Navigation Bar */}
             <div className="flex flex-row gap-4 justify-end items-end p-4 mx-6 sm:mx-16 w-fit bg-sky-50/95 rounded-3xl drop-shadow-lg">
                 <div className="hidden md:flex flex-row gap-1 pl-3">
+                    <Button variant="ghost" size="icon" className="text-sky-600 hover:bg-sky-100 cursor-pointer" asChild>
+                        <Link to="/">
+                            <Home />
+                        </Link>
+                    </Button>
                     <Button variant="ghost" size="icon" className="text-sky-600 hover:bg-sky-100 cursor-pointer" asChild>
                         <a href="https://github.com/Li-Zhi-4" target="_blank" rel="noopener noreferrer">
                             <Github />

@@ -18,7 +18,7 @@ import { Badge } from "@/components/ui/badge"
 import { Link } from "react-router-dom"
 import { ArrowRight } from "lucide-react"
 
-import { FloatingNavigationBar, NavigationBar } from "@/components/NavigationBar"
+import { FloatingNavigationBar } from "@/components/NavigationBar"
 import { TitleSection } from "@/components/TitleSection"
 import { Footer } from "@/components/Footer"
 import genedetek from '/src/assets/genedetek.jpg'
