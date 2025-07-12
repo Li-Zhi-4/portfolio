@@ -104,12 +104,12 @@ export function GeneDetek() {
                 <figcaption className="mt-4 text-sm text-neutral-500">
                     GeneDetek prototype
                 </figcaption>
-                <span>
+                <span className="text-center">
                     See our full report here: <a href="/src/docs/final-report.pdf" target="_blank" rel="noopener noreferrer" className=" hover:bg-sky-100 text-sky-500 font-semibold py-2 px-4 rounded-lg transition">Download Report PDF</a>
                 </span>
             </div>
 
-             <div className="flex flex-col gap-6 justify-center items-center w-screen h-screen px-6 py-16 sm:p-16">
+             <div className="flex flex-col gap-6 justify-center items-center w-screen h-fit sm:h-screen px-6 py-16 sm:p-16">
                 <div className="flex flex-col gap-6 justify-center items-center lg:w-3xl w-full h-fit">                
                     <div className="flex flex-col sm:flex-row gap-6 lg:w-3xl justify-between w-full">
                         <ContentSection
@@ -225,7 +225,7 @@ export function GeneDetek() {
                 </div>
             </div>
 
-            <div className="flex flex-col gap-16 justify-center items-center w-screen h-screen px-6 py-16 sm:p-16">
+            <div className="flex flex-col gap-16 justify-center items-center w-screen h-fit sm:h-screen px-6 py-16 sm:p-16">
                 <div className="flex flex-col gap-6 lg:w-3xl w-full h-fit">
                     <ContentSection
                         title="Final Hairpin-probe Design"
@@ -244,7 +244,7 @@ export function GeneDetek() {
                 </div>
             </div>
 
-            <div className="flex flex-col gap-6 justify-center items-center w-screen h-fit px-6 py-16 sm:p-16">
+            <div className="flex flex-col gap-6 justify-center items-center w-screen h-screen px-6 py-16 sm:p-16">
                 <div className="flex flex-col gap-6 lg:w-3xl w-full h-fit">
                     <ContentSection
                         title="Results"
@@ -269,7 +269,7 @@ export function GeneDetek() {
                 </div>
             </div>
 
-            <div className="flex flex-col gap-6 justify-center items-center w-screen h-fit px-6 py-16 sm:p-16">
+            <div className="flex flex-col gap-6 justify-center items-center w-screen h-screen px-6 py-16 sm:p-16">
                 <img src={future} alt="future outlook" className="max-h-full max-w-full object-contain"/>
                 <figcaption className="mt-4 text-sm text-neutral-500">
                     Implementation of biosensor
@@ -297,7 +297,7 @@ export function GeneDetek() {
                 <figcaption className="mt-4 text-sm text-neutral-500">
                     GeneDetek conference poster
                 </figcaption>
-                <span>
+                <span className="text-center">
                     See our full report here: <a href="/src/docs/final-report.pdf" target="_blank" rel="noopener noreferrer" className=" hover:bg-sky-100 text-sky-500 font-semibold py-2 px-4 rounded-lg transition">Download Report PDF</a>
                 </span>
             </div>
