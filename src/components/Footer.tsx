@@ -32,11 +32,11 @@ export function Footer() {
                                 <Link to="/about">About</Link>
                             </Button>
                         </NavigationMenuItem>
-                        <NavigationMenuItem>
+                        {/* <NavigationMenuItem>
                             <Button variant="link" className="text-sky-50" asChild>
                                 <Link to="/">Contact</Link>
                             </Button>
-                        </NavigationMenuItem>
+                        </NavigationMenuItem> */}
                     </NavigationMenuList>
                 </NavigationMenu>
             </div>

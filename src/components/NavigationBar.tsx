@@ -70,11 +70,11 @@ function FloatingNavigationBar() {
                                             <Link to="/about">About</Link>
                                         </NavigationMenuLink>
                                     </NavigationMenuItem>
-                                    <NavigationMenuItem>
+                                    {/* <NavigationMenuItem>
                                         <NavigationMenuLink asChild className="bg-none px-4 py2 text-sky-600 rounded-lg font-medium hover:bg-sky-100">
                                             <Link to="/">Contact</Link>
                                         </NavigationMenuLink>
-                                    </NavigationMenuItem>
+                                    </NavigationMenuItem> */}
                                     <Separator className="my-4"/>
                                     <NavigationMenuItem>
                                         <NavigationMenuLink asChild className="bg-none px-4 py2 text-sky-600 rounded-lg font-medium hover:bg-sky-100">

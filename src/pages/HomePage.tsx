@@ -32,7 +32,7 @@ const FEATURED_CARDS = [
         descriptor: "UX Design & Product Management",
         title: "Qualification Workflows",
         description: "Designed and delivered a custom qualification workflow feature for general contractors, digitizing the pre-qualification process.",
-        badges: ["Figma", "potato"],
+        badges: ["Figma", "Jira"],
         button: ["See Project", "/portfolio/qualification-workflows"],
         link_button: []
     },    
@@ -41,7 +41,7 @@ const FEATURED_CARDS = [
         descriptor: "UX Design",
         title: "Custom Form Builder",
         description: "Designed initial form builder application for general contractors to streamline project workflows and form management.",
-        badges: ["Figma", "potato"],
+        badges: ["Figma", "Jira"],
         button: ["See Project", "/portfolio/custom-forms"],
         link_button: []
     },
@@ -50,7 +50,7 @@ const FEATURED_CARDS = [
         descriptor: "Capstone Project",
         title: "GeneDetek: Biosensor",
         description: "Built and tested an electrochemical biosensor for detecting genetic mutations affecting SSRI drug uptake.",
-        badges: ["wet chemistry", "PCR", "potato"],
+        badges: ["Research", "Biosensors", "Wet Lab"],
         button: ["See Project", "/portfolio/genedetek"],
         link_button: ["See article", "https://uwaterloo.ca/nanotechnology-engineering/news/capstone-team-wins-esch-competition-and-advances"]
     },
@@ -76,8 +76,10 @@ export function HomePage() {
                             <Link to="/portfolio">See projects</Link>
                         </Button>
                         <Button variant="link" className="text-sky-600">
-                            See my resume
-                            <ArrowRight />
+                            <Link to="/resume.pdf" target="_blank" rel="noopener noreferrer" className="flex flex-row gap-1 items-center">
+                                See my resume
+                                <ArrowRight />
+                            </Link>
                         </Button>
                     </div>
                 </div>

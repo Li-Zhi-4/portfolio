@@ -103,7 +103,7 @@ export function GeneDetek() {
                     GeneDetek prototype
                 </figcaption>
                 <span className="text-center">
-                    See our full report here: <a href="/src/docs/final-report.pdf" target="_blank" rel="noopener noreferrer" className=" hover:bg-sky-100 text-sky-500 font-semibold py-2 px-4 rounded-lg transition">Download Report PDF</a>
+                    See our full report here: <a href="/final-report.pdf" target="_blank" rel="noopener noreferrer" className=" hover:bg-sky-100 text-sky-500 font-semibold py-2 px-4 rounded-lg transition">Download Report PDF</a>
                 </span>
             </div>
 
@@ -296,7 +296,7 @@ export function GeneDetek() {
                     GeneDetek conference poster
                 </figcaption>
                 <span className="text-center">
-                    See our full report here: <a href="/src/docs/final-report.pdf" target="_blank" rel="noopener noreferrer" className=" hover:bg-sky-100 text-sky-500 font-semibold py-2 px-4 rounded-lg transition">Download Report PDF</a>
+                    See our full report here: <a href="/final-report.pdf" target="_blank" rel="noopener noreferrer" className=" hover:bg-sky-100 text-sky-500 font-semibold py-2 px-4 rounded-lg transition">Download Report PDF</a>
                 </span>
             </div>
 
