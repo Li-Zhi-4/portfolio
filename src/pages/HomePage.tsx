@@ -52,7 +52,7 @@ const FEATURED_CARDS = [
         description: "Built and tested an electrochemical biosensor for detecting genetic mutations affecting SSRI drug uptake.",
         badges: ["wet chemistry", "PCR", "potato"],
         button: ["See Project", "/portfolio/genedetek"],
-        link_button: ["See article", ""]
+        link_button: ["See article", "https://uwaterloo.ca/nanotechnology-engineering/news/capstone-team-wins-esch-competition-and-advances"]
     },
 ]
 
@@ -120,8 +120,10 @@ export function HomePage() {
                                                     </Button>
                                                     {value.link_button.length === 0 ? "" :
                                                         <Button variant="link" className="text-sky-600">
-                                                            {value.link_button[0]}
-                                                            <ArrowRight />
+                                                            <Link to={value.link_button[1]} target="_blank" rel="noopener noreferrer" className="flex flex-row gap-1 items-center">
+                                                                {value.link_button[0]}
+                                                                <ArrowRight />
+                                                            </Link>
                                                         </Button>
                                                     }
                                                 </div>
