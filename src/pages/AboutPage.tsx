@@ -9,7 +9,7 @@ const EDUCATION = [
         descriptor: "University of Waterloo",
         title: "Systems Design Engineering | Master of Engineering",
         date: "September 2024 - present",
-        notes: ["Graduated with Honours"]
+        notes: []
     },
     {
         descriptor: "University of Waterloo",
