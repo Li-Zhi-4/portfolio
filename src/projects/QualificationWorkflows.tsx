@@ -87,7 +87,7 @@ export function QualificationWorkflows() {
                     <ContentSection
                         title="Responsibilities"
                         description={["These Qualification Workflow features were requested by our general contractor clients and were added to the product roadmap for implementation. My role was to handle the workflow/design of the feature and ensure that it met the requirements of our client and the standards of the company. I led my team through the product development life cycle from initial research to production."]}
-                            orientation="horizontal"
+                        orientation="horizontal"
                     />
                 </div>
             </div>

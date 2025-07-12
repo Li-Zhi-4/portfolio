@@ -30,7 +30,7 @@ const PROJECTS = [
         image: geneDetek,
         descriptor: "Capstone Project",
         title: "GeneDetek: Biosensor",
-        link: "/"
+        link: "/portfolio/genedetek"
     },
 ]
 

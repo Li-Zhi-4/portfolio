@@ -5,6 +5,7 @@ import { AboutPage } from "@/pages/AboutPage";
 // Projects
 import { QualificationWorkflows } from "@/projects/QualificationWorkflows";
 import { CustomForms } from "@/projects/CustomForms";
+import { GeneDetek } from "@/projects/GeneDetek";
 
 export const routes = [
     { path: "/",            element: <HomePage />},
@@ -13,4 +14,5 @@ export const routes = [
 
     { path: "/portfolio/qualification-workflows",           element: <QualificationWorkflows />},
     { path: "/portfolio/custom-forms",                      element: <CustomForms />},
+    { path: "/portfolio/genedetek",                         element: <GeneDetek />},
 ]

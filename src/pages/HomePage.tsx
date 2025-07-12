@@ -51,7 +51,7 @@ const FEATURED_CARDS = [
         title: "GeneDetek: Biosensor",
         description: "Built and tested an electrochemical biosensor for detecting genetic mutations affecting SSRI drug uptake.",
         badges: ["wet chemistry", "PCR", "potato"],
-        button: ["See Project", ""],
+        button: ["See Project", "/portfolio/genedetek"],
         link_button: ["See article", ""]
     },
 ]
