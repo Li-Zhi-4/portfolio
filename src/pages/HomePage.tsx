@@ -33,7 +33,7 @@ const FEATURED_CARDS = [
         title: "Qualification Workflows",
         description: "Designed and delivered a custom qualification workflow feature for general contractors, digitizing the pre-qualification process.",
         badges: ["Figma", "Jira"],
-        button: ["See Project", "/portfolio/qualification-workflows"],
+        button: ["See project", "/portfolio/qualification-workflows"],
         link_button: []
     },    
     {
@@ -42,7 +42,7 @@ const FEATURED_CARDS = [
         title: "Custom Form Builder",
         description: "Designed initial form builder application for general contractors to streamline project workflows and form management.",
         badges: ["Figma", "Jira"],
-        button: ["See Project", "/portfolio/custom-forms"],
+        button: ["See project", "/portfolio/custom-forms"],
         link_button: []
     },
     {
@@ -51,7 +51,7 @@ const FEATURED_CARDS = [
         title: "GeneDetek: Biosensor",
         description: "Built and tested an electrochemical biosensor for detecting genetic mutations affecting SSRI drug uptake.",
         badges: ["Research", "Biosensors", "Wet Lab"],
-        button: ["See Project", "/portfolio/genedetek"],
+        button: ["See project", "/portfolio/genedetek"],
         link_button: ["See article", "https://uwaterloo.ca/nanotechnology-engineering/news/capstone-team-wins-esch-competition-and-advances"]
     },
 ]
