@@ -5,6 +5,7 @@ export function HomePage() {
 
     return (
         <Hero 
+            useBadge={true}
             sectionLabel="Product Designer • Systems Engineer • UX Researcher"
             title={<>
                 Part designer, part engineer, <br />
