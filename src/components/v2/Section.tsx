@@ -1,38 +1,60 @@
 // components
 import { Content } from "./Content"
 import { Badge } from "../ui/badge"
-import { Button } from "../ui/button"
+import ButtonGroups from "./ButtonGroups"
 
-function Section() {
+interface SectionProps {
+    children?: React.ReactNode;
+    title: string;
+    subtitle: string;
+    description: string;
+    badges?: string[];
+    button?: string;
+    link?: string;
+
+    orientation?: "left" | "right" | "none";
+}
+
+const BADGE: Record<string, [string, string]> = {
+    "Full Stack":               ["rgba(237, 233, 254, 1)", "rgba(127, 34, 254, 1)"],
+    "UX Design":                ["rgba(223, 242, 254, 1)", "rgba(0, 132, 209, 1)"],
+    "UX Research":              ["rgba(219, 234, 254, 1)", "rgba(21, 93, 252, 1)"],
+    "Product Management":       ["rgba(224, 231, 255, 1)", "rgba(79, 57, 246, 1)"],
+    "Academic Research":        ["rgba(220, 252, 231, 1)", "rgba(0, 166, 62, 1)"],
+    "Biosensors":               ["rgba(203, 251, 241, 1)", "rgba(0, 150, 137, 1)"],
+    "Statistical Analysis":     ["rgba(236, 252, 202, 1)", "rgba(94, 165, 0, 1)"]
+}
+
+function Section({ children, title, subtitle, description, badges, button="Read more", link, orientation="left" }: SectionProps) {
 
     return (
         <Content fullWidth={false} >
             <div className="flex flex-row gap-16 w-full items-start text-start">
+                { orientation==="right" ? children : null}
                 
                 <div className="flex flex-col gap-6">
                     <header className="flex flex-col gap-2">
-                        <span className="section-label">Leavoda • present</span>
-                        <h3 className="h3">Designing the Identity of a Field Service Management Platform</h3>
+                        <span className="section-label">{subtitle}</span>
+                        <h3 className="h3">{title}</h3>
                     </header>
 
                     <div className="flex flex-col gap-4">
-                        <p className="p">
-                            Leading the redesign of a startup’s FSM platform, transforming its interface and 
-                            user experience into a clean, modern foundation for future innovation.
-                        </p>
+                        <p className="p">{description}</p>
                         <div className="flex flex-row gap-1">
-                            <Badge>Full Stack</Badge>
-                            <Badge>Full Stack</Badge>
-                            <Badge>Full Stack</Badge>
+                            {badges && badges.map((item, idx) => (
+                                <Badge key={idx} style={{ color: BADGE[item][1], backgroundColor: BADGE[item][0] }}>{item}</Badge>
+                            ))}
                         </div>
                     </div>
 
-                    <Button className="w-fit mt-8">Read more</Button>
+                    <ButtonGroups
+                        buttonTitle="Read more"
+                        linkTitle="See all"
+                        spacing="mt-8"
+                    />
                 </div>
 
-                <div className="bg-neutral-50 w-full h-full">
-                    test
-                </div>
+                { orientation==="left" ? children : null}
             </div>
         </Content>
     )
