@@ -16,7 +16,7 @@ export function HomePage() {
                 description="I’m a product owner and engineer combining design thinking with code to create seamless, human-centered digital products."
             />
 
-            <SectionHeader />
+            <SectionHeader title="Potatoes" />
             
         </>
     )
