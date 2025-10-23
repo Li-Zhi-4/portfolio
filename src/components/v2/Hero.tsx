@@ -1,7 +1,5 @@
-// ShadCN Components
+// components
 import { Badge } from "../ui/badge";
-
-// Components
 import { Content } from "./Content"
 
 interface HeroProps {
