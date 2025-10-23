@@ -11,6 +11,8 @@ interface ContentProps {
  * Container for components.
  * 
  * @param children components inside the container 
+ * @param fullBorder if true, horizontal borders are screen width
+ * @param fullWidth if true, px is 48 px
  * @returns 
  */
 function Content({ children, py="12", bg, fullBorder=false, fullWidth=true }: ContentProps) {

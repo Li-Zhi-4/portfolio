@@ -1,6 +1,7 @@
 // Components
 import { Hero } from "@/components/v2/Hero"
 import { SectionHeader } from "@/components/v2/SectionHeader"
+import { Section } from "@/components/v2/Section"
 
 export function HomePage() {
 
@@ -17,6 +18,10 @@ export function HomePage() {
             />
 
             <SectionHeader title="Potatoes" />
+
+            <Section>
+                
+            </Section>
             
         </>
     )
