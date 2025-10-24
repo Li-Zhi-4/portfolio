@@ -11,8 +11,10 @@ interface SectionProps {
     badges?: string[];
     button?: string;
     link?: string;
+    buttonSpacing?: string;
 
-    orientation?: "left" | "right" | "none";
+    orientation?: "left" | "right";
+    fullBorder?: boolean;
 }
 
 const BADGE: Record<string, [string, string]> = {
@@ -25,14 +27,27 @@ const BADGE: Record<string, [string, string]> = {
     "Statistical Analysis":     ["rgba(236, 252, 202, 1)", "rgba(94, 165, 0, 1)"]
 }
 
-function Section({ children, title, subtitle, description, badges, button="Read more", link, orientation="left" }: SectionProps) {
+/**
+ * Component for sections.
+ * 
+ * @param children for image component
+ * @param badges list of applicable skills
+ * @param button name of button, if left empty no button appears
+ * @param link name of link, if left empty no link appears
+ * @param buttonSpacing tailwind css for ButtonGroups
+ * @param orientation placement of children components
+ */
+function Section({ children, title, subtitle, description, badges, button, link, buttonSpacing, orientation="right", fullBorder=false }: SectionProps) {
 
     return (
-        <Content fullWidth={false} >
-            <div className="flex flex-row gap-16 w-full items-start text-start">
-                { orientation==="right" ? children : null}
+        <Content fullWidth={false} fullBorder={fullBorder} >
+            <div className="flex flex-col lg:flex-row lg:gap-16 gap-6 w-full items-start text-start">
                 
-                <div className="flex flex-col gap-6">
+                {children && <div className={`w-full h-full min-h-[200px] ${orientation === "right" ? "order-1 lg:order-2" : "order-1 lg:order-1"}`}>
+                    {children}
+                </div>}
+                
+                <div className={`flex flex-col gap-6 ${orientation === "right" ? "order-2 lg:order-1" : "order-2 lg:order-2"}`}>
                     <header className="flex flex-col gap-2">
                         <span className="section-label">{subtitle}</span>
                         <h3 className="h3">{title}</h3>
@@ -40,7 +55,7 @@ function Section({ children, title, subtitle, description, badges, button="Read 
 
                     <div className="flex flex-col gap-4">
                         <p className="p">{description}</p>
-                        <div className="flex flex-row gap-1">
+                        <div className="flex flex-row flex-wrap gap-1">
                             {badges && badges.map((item, idx) => (
                                 <Badge key={idx} style={{ color: BADGE[item][1], backgroundColor: BADGE[item][0] }}>{item}</Badge>
                             ))}
@@ -48,13 +63,13 @@ function Section({ children, title, subtitle, description, badges, button="Read 
                     </div>
 
                     <ButtonGroups
-                        buttonTitle="Read more"
-                        linkTitle="See all"
-                        spacing="mt-8"
+                        buttonTitle={button}
+                        linkTitle={link}
+                        spacing={buttonSpacing}
                     />
                 </div>
 
-                { orientation==="left" ? children : null}
+                {/* { orientation==="right" ? children : null} */}
             </div>
         </Content>
     )
