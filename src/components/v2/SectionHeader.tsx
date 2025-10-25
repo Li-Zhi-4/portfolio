@@ -3,13 +3,15 @@ import { Content } from "./Content"
 import ButtonGroups from "./ButtonGroups"
 
 interface SectionHeaderProps {
-    title: string
+    title: string;
+    linkTitle?: string;
+    href?: string;
 }
 
-function SectionHeader({ title }: SectionHeaderProps) {
+function SectionHeader({ title, linkTitle, href }: SectionHeaderProps) {
 
     return (
-        <Content fullBorder={true} fullWidth={false} bg="neutral-50">
+        <Content fullBorder={true} borderB={false} fullWidth={false} bg="neutral-50">
             <div className="flex flex-row justify-between items-center w-full">
                 <h2 className="section-label">{title}</h2>
 

@@ -5,16 +5,18 @@ import ButtonGroups from "./ButtonGroups"
 
 interface SectionProps {
     children?: React.ReactNode;
-    title: string;
-    subtitle: string;
-    description: string;
+    title?: string;
+    subtitle?: string;
+    description?: string;
     badges?: string[];
     button?: string;
     link?: string;
     buttonSpacing?: string;
 
+    flexDir?: "flex-col" | "flex-row";
     orientation?: "left" | "right";
     fullBorder?: boolean;
+    borderB?: boolean;
 }
 
 const BADGE: Record<string, [string, string]> = {
@@ -37,10 +39,10 @@ const BADGE: Record<string, [string, string]> = {
  * @param buttonSpacing tailwind css for ButtonGroups
  * @param orientation placement of children components
  */
-function Section({ children, title, subtitle, description, badges, button, link, buttonSpacing, orientation="right", fullBorder=false }: SectionProps) {
+function Section({ children, title, subtitle, description, badges, button, link, buttonSpacing, orientation="right", fullBorder=false, borderB=true, flexDir="flex-col" }: SectionProps) {
 
     return (
-        <Content fullWidth={false} fullBorder={fullBorder} >
+        <Content fullWidth={false} fullBorder={fullBorder} borderB={borderB} flexDir={flexDir} >
             <div className="flex flex-col lg:flex-row lg:gap-16 gap-6 w-full items-start text-start">
                 
                 {children && <div className={`w-full h-full min-h-[200px] ${orientation === "right" ? "order-1 lg:order-2" : "order-1 lg:order-1"}`}>
@@ -69,12 +71,61 @@ function Section({ children, title, subtitle, description, badges, button, link,
                     />
                 </div>
 
-                {/* { orientation==="right" ? children : null} */}
             </div>
         </Content>
     )
 }
 
+
+function SectionHeroImage({ children, title, subtitle, description, badges, button, link, buttonSpacing, fullBorder=false, borderB=true }: SectionProps) {
+
+
+    return (
+        <Content fullWidth={false} fullBorder={fullBorder} borderB={borderB} >
+            <div className="flex flex-col lg:gap-16 gap-6 w-full items-start text-start">
+                
+                {children && <div className={`w-full h-full min-h-[200px] order-1`}>
+                    {children}
+                </div>}
+                
+                <div className={`flex flex-col gap-6 order-2`}>
+                    <header className="flex flex-col gap-2">
+                        <span className="section-label">{subtitle}</span>
+                        <h3 className="h3">{title}</h3>
+                    </header>
+
+                    <div className="flex flex-col gap-4">
+                        <p className="p">{description}</p>
+                        <div className="flex flex-row flex-wrap gap-1">
+                            {badges && badges.map((item, idx) => (
+                                <Badge key={idx} style={{ color: BADGE[item][1], backgroundColor: BADGE[item][0] }}>{item}</Badge>
+                            ))}
+                        </div>
+                    </div>
+
+                    <ButtonGroups
+                        buttonTitle={button}
+                        linkTitle={link}
+                        spacing={buttonSpacing}
+                    />
+                </div>
+
+            </div>
+        </Content>
+    )
+}
+
+function SectionRow({ children }: SectionProps) {
+
+    return (
+        <Content flexDir="flex-row">
+            {children}
+        </Content>
+    )
+}
+
 export {
-    Section
+    Section,
+    SectionHeroImage,
+    SectionRow
 }

@@ -19,7 +19,7 @@ export default function ButtonGroups({ buttonTitle, linkTitle, href="#", spacing
             {buttonTitle && <Button variant="default" className="">
                 <Link to="#">{buttonTitle}</Link>
             </Button>}
-            {linkTitle && href && <a href={href} className="group inline-flex items-center text-neutral-500 font-normal" >
+            {linkTitle && href && <a href={href} className="group inline-flex items-center text-neutral-500 font-light" >
                 <span className="relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 group-hover:after:w-full">
                     {linkTitle}
                 </span>
