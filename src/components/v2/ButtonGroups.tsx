@@ -15,7 +15,7 @@ interface ButtonGroups {
 export default function ButtonGroups({ buttonTitle, linkTitle, href="#", spacing }: ButtonGroups) {
 
     return (
-        <div className={`flex flex-row gap-8 ${spacing}`}>
+        <div className={`flex flex-row gap-8 items-center ${spacing}`}>
             {buttonTitle && <Button variant="default" className="">
                 <Link to="#">{buttonTitle}</Link>
             </Button>}

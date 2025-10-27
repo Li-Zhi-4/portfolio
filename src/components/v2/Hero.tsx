@@ -9,10 +9,15 @@ interface HeroProps {
     description: string;
 }
 
+/**
+ * Hero component
+ * 
+ * @param sectionLabel if useBadge is false, displays section label text format  
+ */
 export function Hero({ useBadge=false, sectionLabel, title, description }: HeroProps) {
 
     return (
-        <Content py="32" borderB={false} >
+        <Content py="py-32" borderB={false} >
             {useBadge ? 
                 <Badge className="flex flex-row gap-2 bg-neutral-100 text-neutral-500 font-light">
                     <span className="bg-sky-500 rounded-full w-1 h-1" />

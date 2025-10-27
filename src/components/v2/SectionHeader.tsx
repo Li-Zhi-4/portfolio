@@ -8,15 +8,16 @@ interface SectionHeaderProps {
     href?: string;
 }
 
-function SectionHeader({ title, linkTitle, href }: SectionHeaderProps) {
+function SectionHeader({ title, linkTitle, href="#" }: SectionHeaderProps) {
 
     return (
-        <Content fullBorder={true} borderB={false} fullWidth={false} bg="neutral-50">
+        <Content fullBorder={true} borderB={false} fullWidth={false} bg="bg-neutral-50">
             <div className="flex flex-row justify-between items-center w-full">
                 <h2 className="section-label">{title}</h2>
 
                 <ButtonGroups 
-                    linkTitle="See all"
+                    linkTitle={linkTitle}
+                    href={href}
                 />
             </div>
         </Content>
