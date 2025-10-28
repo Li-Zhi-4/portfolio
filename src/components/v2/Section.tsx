@@ -12,6 +12,7 @@ interface SectionProps {
 
     buttonTitle?: string;
     linkTitle?: string;
+    icon?: "arrow" | "download";
     spacing?: string;
     href?: string;
 
@@ -31,8 +32,9 @@ function Section({
     
     buttonTitle, 
     linkTitle, 
-    spacing, 
+    icon="arrow",
     href, 
+    spacing, 
     
     flexDir="flex-row",         // determines flex direction of content
     order="second",             // determines order of image and content
@@ -58,6 +60,7 @@ function Section({
                         linkTitle={linkTitle}
                         spacing={spacing}
                         href={href}
+                        icon={icon}
                     />
                 </div>
 
@@ -72,18 +75,22 @@ interface SectionGridProps {
 
     fullBorder?: boolean;
     borderB?: boolean;
+    dividex?: boolean;
+    dividey?: boolean;
 }
 
 function SectionGrid({
     children, 
     
     fullBorder,                 // displays full y-axis borders
-    borderB                     // displays bottom border of inner content
+    borderB,                    // displays bottom border of inner content
+    dividex=true,               // displays vertical separators (should always be true)
+    dividey=false               // displays horizontal separators (only true for >2 items)
 }: SectionGridProps) {
 
     return (
         <Content fullWidth={false} fullBorder={fullBorder} borderB={borderB} px="" py="">
-            <div className={`grid md:grid-cols-2 grid-cols-1 divide-x divide-y divide-neutral-200 items-start text-start`}>
+            <div className={`grid lg:grid-cols-2 grid-cols-1 ${dividex ? "divide-x" : null} ${dividey ? "divide-y" : null} divide-neutral-200 items-start text-start box-border`}>
                 {children}
             </div>
         </Content>

@@ -9,6 +9,7 @@ interface InfoBlockProps {
 
     buttonTitle?: string;
     linkTitle?: string;
+    icon?: "arrow" | "download";
     spacing?: string;
     href?: string;
 
@@ -34,10 +35,24 @@ const BADGE: Record<string, [string, string]> = {
  * @param spacing provide "mt-#" as the value for the top margin padding between ButtonGroups and the rest of the component
  * @param order "order-#", the ordering of the component
  */
-function InfoBlock({ subtitle, title, description, badges, buttonTitle, linkTitle, spacing, href, order, padding=false }: InfoBlockProps) {
+function InfoBlock({ 
+    subtitle, 
+    title, 
+    description, 
+    badges, 
+    
+    buttonTitle, 
+    linkTitle, 
+    icon="arrow", 
+    spacing, 
+    href, 
+    
+    order, 
+    padding=false 
+}: InfoBlockProps) {
 
     return (
-        <div className={`flex flex-col gap-6 ${order} ${padding ? "p-12" : null}`}>
+        <div className={`flex flex-col gap-6 ${order} ${padding ? "p-12" : null} h-full w-full`}>
             <header className="flex flex-col gap-2">
                 <span className="section-label">{subtitle}</span>
                 <h3 className="h3">{title}</h3>
@@ -55,6 +70,7 @@ function InfoBlock({ subtitle, title, description, badges, buttonTitle, linkTitl
             {(buttonTitle || linkTitle) && <ButtonGroups
                 buttonTitle={buttonTitle}
                 linkTitle={linkTitle}
+                icon={icon}
                 spacing={spacing}
                 href={href}
             />}

@@ -93,7 +93,7 @@ export function HomePage() {
                 </div>
             </Section>
             
-            <SectionHeader title="Engineering" />
+            <SectionHeader title="Engineering" linkTitle="See all" />
 
             <Section
                 title="Engineering the Next-Gen Biosensor for Personalized Antidepressant Therapy"
@@ -113,53 +113,52 @@ export function HomePage() {
                 </div>
             </Section>
 
-            <SectionGrid>
+            <SectionGrid borderB={true}>
                 <InfoBlock
-                    title="Engineering the Next-Gen Biosensor for Personalized Antidepressant Therapy"
-                    subtitle="Capstone • 2023-2024"
-                    description="Built a novel electrochemical biosensor for the detection of genetic mutations affecting the uptake of certain antidepressant medication drugs."
-                    badges={["Product Management", "Academic Research", "Biosensors"]}
+                    title="Novel Carbon Quantum Dot Antifouling Coating Aiding Detection of Breast Cancer Biomarkers"
+                    subtitle="Research • 2024"
+                    description="Designed a novel electrochemical biosensor utilizing a new antifouling technique to enhance sensor detection limits and ensure reliability in the realm of point-of-care (POC) health diagnostics."
+                    badges={["Academic Research", "Biosensors"]}
 
                     buttonTitle="Read more"
+                    linkTitle="See paper"
+                    icon="download"
                     spacing="mt-8"
 
                     padding={true}
                 />
                 <InfoBlock
-                    title="Engineering the Next-Gen Biosensor for Personalized Antidepressant Therapy"
-                    subtitle="Capstone • 2023-2024"
-                    description="Built a novel electrochemical biosensor for the detection of genetic mutations affecting the uptake of certain antidepressant medication drugs."
-                    badges={["Product Management", "Academic Research", "Biosensors"]}
+                    title="Socioeconomic Analysis of Confirmed COVID-19 Cases Across Rural and Urban Regions in Ontario"
+                    subtitle="Research • 2025"
+                    description="Analyzed COVID-19 incidence rates across Ontario to assess how income influences infection patterns and compared public health regions to identify key socioeconomic factors associated with outcomes."
+                    badges={["Academic Research", "Statistical Analysis"]}
 
                     buttonTitle="Read more"
-                    spacing="mt-8"
-
-                    padding={true}
-                />
-                <InfoBlock
-                    title="Engineering the Next-Gen Biosensor for Personalized Antidepressant Therapy"
-                    subtitle="Capstone • 2023-2024"
-                    description="Built a novel electrochemical biosensor for the detection of genetic mutations affecting the uptake of certain antidepressant medication drugs."
-                    badges={["Product Management", "Academic Research", "Biosensors"]}
-
-                    buttonTitle="Read more"
-                    spacing="mt-8"
-
-                    padding={true}
-                />
-                <InfoBlock
-                    title="Engineering the Next-Gen Biosensor for Personalized Antidepressant Therapy"
-                    subtitle="Capstone • 2023-2024"
-                    description="Built a novel electrochemical biosensor for the detection of genetic mutations affecting the uptake of certain antidepressant medication drugs."
-                    badges={["Product Management", "Academic Research", "Biosensors"]}
-
-                    buttonTitle="Read more"
+                    linkTitle="See paper"
+                    icon="download"
                     spacing="mt-8"
 
                     padding={true}
                 />
             </SectionGrid>
 
+            <Section
+                title="Analyzing User Perception and Consumer Decision-Making to Strategic User Interface Design Patterns in Shopping Applications"
+                subtitle="Research • 2021"
+                description="Examined users’ (n = 1,116) susceptibility and perception of strategic design elements in shopping applications and how these design patterns influenced users’ decision-making and purchase intent."
+                badges={["UX Research", "Academic Research", "Statistical Analysis"]}
+                
+                buttonTitle="Read more"
+                linkTitle="See paper"
+                icon="download"
+                spacing="mt-8"
+
+                order="first"
+                flexDir="flex-col"
+                borderB={false}
+            />
+
+            <SectionHeader title="UI Designs" />
         </>
     )
 }
