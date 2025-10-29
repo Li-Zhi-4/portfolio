@@ -54,12 +54,12 @@ function InfoBlock({
     return (
         <div className={`flex flex-col gap-6 ${order} ${padding ? "p-12" : null} h-full w-full`}>
             <header className="flex flex-col gap-2">
-                <span className="section-label">{subtitle}</span>
+                <span className="section-label text-neutral-500">{subtitle}</span>
                 <h3 className="h3">{title}</h3>
             </header>
 
             <div className="flex flex-col gap-4">
-                <p className="p">{description}</p>
+                <p className="p text-neutral-500">{description}</p>
                 <div className="flex flex-row flex-wrap gap-1">
                     {badges && badges.map((item, idx) => (
                         <Badge key={idx} style={{ color: BADGE[item][1], backgroundColor: BADGE[item][0] }}>{item}</Badge>

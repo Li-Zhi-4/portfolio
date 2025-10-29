@@ -3,10 +3,9 @@ import { Hero } from "@/components/v2/Hero";
 import { SectionHeader } from "@/components/v2/SectionHeader";
 import { Section, SectionGrid } from "@/components/v2/Section";
 import { InfoBlock } from "@/components/v2/InfoBlock";
-import { Content } from "@radix-ui/react-navigation-menu";
-import { Separator } from "@/components/ui/separator";
-import { Badge } from "@/components/ui/badge";
-import ButtonGroups from "@/components/v2/ButtonGroups";
+import ContactMe from "@/components/v2/ContactMe";
+import Footer from "@/components/v2/Footer";
+import NavigationBar from "@/components/v2/NavigationBar";
 
 // images
 import leavoda from "/public/leavoda-logo.svg";
@@ -18,6 +17,8 @@ export function HomePage() {
 
     return (
         <>
+            <NavigationBar />
+
             <Hero
                 useBadge={true}
                 sectionLabel="Product Designer • Systems Engineer • UX Researcher"
@@ -158,7 +159,9 @@ export function HomePage() {
                 borderB={false}
             />
 
-            <SectionHeader title="UI Designs" />
+            <ContactMe />
+
+            <Footer />
         </>
     )
 }

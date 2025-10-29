@@ -151,7 +151,7 @@
   font-weight: 400;
   letter-spacing: 2.8px;
   text-transform: uppercase;
-  color: oklch(55.6% 0 0);
+  /* color: oklch(55.6% 0 0); */
 }
 
 .quote {
@@ -165,7 +165,7 @@
   font-family: 'Geist';
   font-size: 18px;
   font-weight: 300;
-  color: oklch(55.6% 0 0);
+  /* color: oklch(55.6% 0 0); */
 }
 
 .sky-gradient {
