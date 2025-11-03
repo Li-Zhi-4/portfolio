@@ -20,7 +20,6 @@ export function HomePage() {
             <NavigationBar />
 
             <Hero
-                useBadge={true}
                 sectionLabel="Product Designer • Systems Engineer • UX Researcher"
                 title={
                     <>

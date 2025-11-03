@@ -24,7 +24,7 @@ export function Hero({ useBadge=false, sectionLabel, title, description }: HeroP
                     {sectionLabel}
                 </Badge>
             :
-                <span className="section-label">
+                <span className="section-label text-neutral-500">
                     {sectionLabel}
                 </span>
             }

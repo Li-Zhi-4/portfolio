@@ -72,6 +72,8 @@ function Section({
 
 interface SectionGridProps {
     children?: React.ReactNode;
+    className?: string;
+    styles?: string;
 
     fullBorder?: boolean;
     borderB?: boolean;
@@ -81,6 +83,8 @@ interface SectionGridProps {
 
 function SectionGrid({
     children, 
+    className,
+    styles,
     
     fullBorder,                 // displays full y-axis borders
     borderB,                    // displays bottom border of inner content
@@ -89,8 +93,8 @@ function SectionGrid({
 }: SectionGridProps) {
 
     return (
-        <Content fullWidth={false} fullBorder={fullBorder} borderB={borderB} px="" py="">
-            <div className={`grid lg:grid-cols-2 grid-cols-1 ${dividex ? "divide-x" : null} ${dividey ? "divide-y" : null} divide-neutral-200 items-start text-start box-border`}>
+        <Content fullWidth={false} fullBorder={fullBorder} borderB={borderB} px="" py="" className={className}>
+            <div className={`grid lg:grid-cols-2 grid-cols-1 ${dividex ? "divide-x" : null} ${dividey ? "divide-y" : null} divide-neutral-200 items-start text-start box-border ${styles}`}>
                 {children}
             </div>
         </Content>

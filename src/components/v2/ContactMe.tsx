@@ -6,10 +6,15 @@ import { Link } from "react-router-dom"
 // icons
 import { ArrowRight } from "lucide-react"
 
-export default function ContactMe() {
+interface ContactMeProps {
+    fullBorder?: boolean;
+    className?: string;
+}
+
+export default function ContactMe({ className, fullBorder=true }: ContactMeProps) {
 
     return (
-        <Content fullBorder={true} borderB={false} bg="bg-neutral-950">
+        <Content fullBorder={fullBorder} borderB={false} bg="bg-neutral-950" className={className}>
             <div className={`flex flex-col gap-6 items-center h-full w-full`}>
                 <header className="flex flex-col gap-2">
                     <span className="section-label text-neutral-200">Contact Me</span>

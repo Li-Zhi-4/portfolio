@@ -1,5 +1,6 @@
 interface ContentProps {
     children: React.ReactNode;
+    className?: string;
     
     py?: string;                            // controls the inner div y padding
     px?: string;                            // controls the inner div x padding
@@ -20,10 +21,10 @@ interface ContentProps {
  * @param fullWidth if true, px is 48 px
  * @returns 
  */
-function Content({ children, py="py-12", px="lg:px-16 sm:px-12 px-6", bg, flexDir="flex-col", fullBorder=false, fullWidth=true, borderB=true }: ContentProps) {
+function Content({ children, className, py="py-12", px="lg:px-16 sm:px-12 px-6", bg, flexDir="flex-col", fullBorder=false, fullWidth=true, borderB=true }: ContentProps) {
 
     return (
-        <div className={`w-[100%] ${bg} ${fullBorder ? `border-y border-neutral-200` : null}`}>
+        <div className={`w-[100%] ${bg} ${fullBorder ? `border-y border-neutral-200` : null} ${className}`}>
             {/* Outer container, screen width, screen border bottom (boolean) */}
             <div className={`flex sm:w-[80%] w-[90%] justify-center ${px} mx-auto border-x border-neutral-200 ${borderB ? 'border-b' : null}`}>
                 {/* Inner container, 80-90% width, grey border on left/right, container border bottom (boolean) */}
