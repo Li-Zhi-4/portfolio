@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 // components
 import { Hero } from "@/components/v2/Hero";
 import { SectionHeader } from "@/components/v2/SectionHeader";
@@ -6,12 +8,17 @@ import { InfoBlock } from "@/components/v2/InfoBlock";
 import ContactMe from "@/components/v2/ContactMe";
 import Footer from "@/components/v2/Footer";
 import NavigationBar from "@/components/v2/NavigationBar";
+import {
+    InputGroup,
+    InputGroupAddon,
+    InputGroupButton,
+    InputGroupInput,
+    InputGroupText,
+    InputGroupTextarea,
+} from "@/components/ui/input-group"
 
-// images
-import leavoda from "/public/leavoda-logo.svg";
-import waterloo from "/public/university-of-waterloo.png";
-import compass from "/public/compass.svg";
-import { Subtitles } from "lucide-react";
+// icons
+import { Search } from "lucide-react";
 
 const PORTFOLIO = [
     {
@@ -97,6 +104,21 @@ const PORTFOLIO = [
 ]
 
 export function PortfolioPage() {
+    const [query, setQuery] = useState("");
+
+    const filtered = PORTFOLIO.filter((item) => {
+        const q = query.toLowerCase();
+
+        return (
+            item.title.toLowerCase().includes(q) ||
+            item.description.toLowerCase().includes(q) ||
+            item.subtitle.toLowerCase().includes(q) ||
+            item.badges.some((b) => b.toLowerCase().includes(q))
+        );
+    });
+
+    // console.log("Query: ", query)
+    // console.log("Filtered ", filtered)
 
     return (
         <>
@@ -105,38 +127,60 @@ export function PortfolioPage() {
             <Hero
                 useBadge={true}
                 sectionLabel="Leavoda case study currently in progress"
-                title={
-                    <>
-                        Portfolio
-                    </>
-                }
+                title={<>Portfolio</>}
                 description="From startups to corporations, and from personal projects to academic research, this collection showcases my latest work."
             />
 
-            <SectionHeader title="All Work" />
+            <SectionHeader title="All Work">
+                <div>
+                    <InputGroup className="bg-white">
+                        <InputGroupInput
+                            type="text"
+                            placeholder="Search projects..."
+                            value={query}
+                            onChange={(e) => setQuery(e.target.value)}
+                        />
+                        <InputGroupAddon>
+                            <Search />
+                        </InputGroupAddon>
+                        <InputGroupAddon align="inline-end">{filtered.length} results</InputGroupAddon>
+                    </InputGroup>
+                </div>
+            </SectionHeader>
 
-            <SectionGrid borderB={false} dividey={true} styles="[&>*:nth-last-child(2)]:border-b-0">
-                {PORTFOLIO.map((item, idx) => (
-                    <InfoBlock
-                        key={idx}
-                        subtitle={item.subtitle}
-                        title={item.title}
-                        description={item.description}
-                        badges={item.badges}
+            {filtered.length > 0 ?
+                (
+                    <SectionGrid borderB={false} dividey={true} styles="[&>*:nth-last-child(2)]:border-b-0">
+                        {filtered.map((item, idx) => (
+                            <InfoBlock
+                                key={idx}
+                                subtitle={item.subtitle}
+                                title={item.title}
+                                description={item.description}
+                                badges={item.badges}
 
-                        buttonTitle={item.buttonTitle}
-                        linkTitle={item.linkTitle}
-                        icon={item.icon === "download" || item.icon === "arrow" ? item.icon : undefined}
-                        spacing="mt-8"
+                                buttonTitle={item.buttonTitle}
+                                linkTitle={item.linkTitle}
+                                icon={item.icon === "download" || item.icon === "arrow" ? item.icon : undefined}
+                                spacing="mt-8"
 
-                        padding={true}
-                    />
-                ))}
-            </SectionGrid>
+                                padding={true}
+                            />
+                        ))}
+                    </SectionGrid>
+                ) 
+            :
+                (
+                    <SectionGrid columns="lg:grid-cols-1" borderB={false} >
+                        <p className="text-neutral-500 text-center p-12">No results found.</p>
+                    </SectionGrid>
+                )
+
+            }
 
             <ContactMe />
             
             <Footer />
         </>
-    )
-}
+    );
+};

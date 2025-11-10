@@ -17,7 +17,7 @@ interface HeroProps {
 export function Hero({ useBadge=false, sectionLabel, title, description }: HeroProps) {
 
     return (
-        <Content py="py-32" borderB={false} >
+        <Content py="pb-32 pt-48" borderB={false} >
             {useBadge ? 
                 <Badge className="flex flex-row gap-2 bg-neutral-100 text-neutral-500 font-light">
                     <span className="bg-sky-500 rounded-full w-1 h-1" />
@@ -29,7 +29,7 @@ export function Hero({ useBadge=false, sectionLabel, title, description }: HeroP
                 </span>
             }
             <h1 className="h1">{title}</h1>
-            <p className="p">{description}</p>
+            <p className="p text-neutral-500">{description}</p>
         </Content>
     )
 }

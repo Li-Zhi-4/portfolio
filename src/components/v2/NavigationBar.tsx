@@ -33,10 +33,10 @@ import { Github, Linkedin, Menu, ExternalLink, Home } from "lucide-react"
 
 const LINKS = [
     { name: "Home", link: "/" },
-    { name: "Work", link: "/portfolio" },
-    { name: "Fun", link: "#" },
-    { name: "Blog", link: "#" },
-    { name: "Resume", link: "#" }
+    { name: "Portfolio", link: "/portfolio" },
+    { name: "About", link: "#" },
+    // { name: "Blog", link: "#" },
+    // { name: "Resume", link: "#" }
 ]
 
 export default function NavigationBar() {

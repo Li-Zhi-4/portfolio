@@ -79,6 +79,7 @@ interface SectionGridProps {
     borderB?: boolean;
     dividex?: boolean;
     dividey?: boolean;
+    columns?: string;
 }
 
 function SectionGrid({
@@ -89,12 +90,13 @@ function SectionGrid({
     fullBorder,                 // displays full y-axis borders
     borderB,                    // displays bottom border of inner content
     dividex=true,               // displays vertical separators (should always be true)
-    dividey=false               // displays horizontal separators (only true for >2 items)
+    dividey=false,              // displays horizontal separators (only true for >2 items)
+    columns="lg:grid-cols-2"
 }: SectionGridProps) {
 
     return (
         <Content fullWidth={false} fullBorder={fullBorder} borderB={borderB} px="" py="" className={className}>
-            <div className={`grid lg:grid-cols-2 grid-cols-1 ${dividex ? "divide-x" : null} ${dividey ? "divide-y" : null} divide-neutral-200 items-start text-start box-border ${styles}`}>
+            <div className={`grid ${columns} grid-cols-1 ${dividex ? "divide-x" : null} ${dividey ? "divide-y" : null} divide-neutral-200 items-start text-start box-border ${styles}`}>
                 {children}
             </div>
         </Content>
