@@ -4,7 +4,7 @@ import ButtonGroups from "./ButtonGroups";
 interface InfoBlockProps {
     subtitle: string;
     title: string;
-    description: string;
+    description: string | React.ReactNode;
     badges?: string[];
 
     buttonTitle?: string;
@@ -12,9 +12,11 @@ interface InfoBlockProps {
     icon?: "arrow" | "download";
     spacing?: string;
     href?: string;
+    to?: string;
 
     order?: string;
     padding?: boolean;
+    height?: string;
 }
 
 const BADGE: Record<string, [string, string]> = {
@@ -46,13 +48,15 @@ function InfoBlock({
     icon="arrow", 
     spacing, 
     href, 
+    to,
     
     order, 
-    padding=false 
+    padding=false,
+    height="h-full"
 }: InfoBlockProps) {
 
     return (
-        <div className={`flex flex-col gap-6 ${order} ${padding ? "p-12" : null} h-full w-full`}>
+        <div className={`flex flex-col gap-6 ${order} ${padding ? "p-6 sm:p-12" : null} ${height} w-full`}>
             <header className="flex flex-col gap-2">
                 <span className="section-label text-neutral-500">{subtitle}</span>
                 <h3 className="h3">{title}</h3>
@@ -60,11 +64,11 @@ function InfoBlock({
 
             <div className="flex flex-col gap-4">
                 <p className="p text-neutral-500">{description}</p>
-                <div className="flex flex-row flex-wrap gap-1">
-                    {badges && badges.map((item, idx) => (
+                {badges && <div className="flex flex-row flex-wrap gap-1">
+                    {badges.map((item, idx) => (
                         <Badge key={idx} style={{ color: BADGE[item][1], backgroundColor: BADGE[item][0] }}>{item}</Badge>
                     ))}
-                </div>
+                </div>}
             </div>
 
             {(buttonTitle || linkTitle) && <ButtonGroups
@@ -73,6 +77,7 @@ function InfoBlock({
                 icon={icon}
                 spacing={spacing}
                 href={href}
+                to={to}
             />}
         </div>
     )

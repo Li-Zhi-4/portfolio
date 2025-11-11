@@ -21,7 +21,7 @@ interface ContentProps {
  * @param fullWidth if true, px is 48 px
  * @returns 
  */
-function Content({ children, className, py="py-12", px="lg:px-16 sm:px-12 px-6", bg, flexDir="flex-col", fullBorder=false, fullWidth=true, borderB=true }: ContentProps) {
+function Content({ children, className, py="py-12", px="sm:px-12 px-6", bg, flexDir="flex-col", fullBorder=false, fullWidth=true, borderB=true }: ContentProps) {
 
     return (
         <div className={`w-[100%] ${bg} ${fullBorder ? `border-y border-neutral-200` : null} ${className}`}>

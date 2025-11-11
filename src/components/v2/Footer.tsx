@@ -3,20 +3,20 @@ import { Content } from "./Content"
 import { Link } from "react-router-dom"
 
 const NAVIGATION = [
-    { name: "Home", link: "#" },
-    { name: "Projects", link: "#" },
-    { name: "Fun", link: "#" },
-    { name: "Blog", link: "#" },
-    { name: "Resume", link: "#" }
+    { name: "Home", link: "/" },
+    { name: "Projects", link: "/portfolio" },
+    { name: "About", link: "/about" },
+    // { name: "Blog", link: "#" },
+    // { name: "Resume", link: "/resume.pdf" }
 ];
 
 const PROJECTS = [
-    { name: "ShadCN Figma Kit", link: "#" }
+    { name: "Free ShadCN Figma Kit (coming soon)", link: "#" }
 ]
 
 const CONTACT = [
-    { name: "LinkedIn", link: "#" },
-    { name: "GitHub", link: "#" },
+    { name: "LinkedIn", link: "https://www.linkedin.com/in/sara-thompson-s44/" },
+    { name: "GitHub", link: "https://github.com/Li-Zhi-4" },
 ]
 
 export default function Footer() {
@@ -48,7 +48,7 @@ export default function Footer() {
                         <span className="mb-3 font-semibold text-neutral-800">Contact</span>
                         {CONTACT.map((item, idx) => (
                             <li key={idx}>
-                                <Link to={item.link} className="font-light">{item.name}</Link>
+                                <Link to={item.link} className="font-light" target="_blank" rel="noopener noreferrer">{item.name}</Link>
                             </li>
                         ))}
                     </ul>

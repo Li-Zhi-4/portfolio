@@ -34,7 +34,7 @@ import { Github, Linkedin, Menu, ExternalLink, Home } from "lucide-react"
 const LINKS = [
     { name: "Home", link: "/" },
     { name: "Portfolio", link: "/portfolio" },
-    { name: "About", link: "#" },
+    { name: "About", link: "/about" },
     // { name: "Blog", link: "#" },
     // { name: "Resume", link: "#" }
 ]
@@ -60,13 +60,51 @@ export default function NavigationBar() {
                             </Button>
                         </SheetTrigger>
                         <SheetContent>
-                            <SheetHeader>
-                                <SheetTitle>The Mobile Navigation Bar</SheetTitle>
-                                <SheetDescription>
-                                    test
-                                </SheetDescription>
-                            </SheetHeader>
-                        </SheetContent>
+                        <SheetHeader className="flex items-center">
+                            <SheetTitle>Menu</SheetTitle>
+                            <NavigationMenu>
+                                <NavigationMenuList className="flex flex-col py-6">
+                                    <NavigationMenuItem>
+                                        <NavigationMenuLink asChild className="bg-none px-4 py2 text-neutral-600 rounded-lg font-medium hover:bg-neutral-100">
+                                            <Link to="/">Home</Link>
+                                        </NavigationMenuLink>
+                                    </NavigationMenuItem>
+                                    <NavigationMenuItem>
+                                        <NavigationMenuLink asChild className="bg-none px-4 py2 text-neutral-600 rounded-lg font-medium hover:bg-neutral-100">
+                                            <Link to="/portfolio">Portfolio</Link>
+                                        </NavigationMenuLink>
+                                    </NavigationMenuItem>
+                                    <NavigationMenuItem>
+                                        <NavigationMenuLink asChild className="bg-none px-4 py2 text-neutral-600 rounded-lg font-medium hover:bg-neutral-100">
+                                            <Link to="/about">About</Link>
+                                        </NavigationMenuLink>
+                                    </NavigationMenuItem>
+                                    {/* <NavigationMenuItem>
+                                        <NavigationMenuLink asChild className="bg-none px-4 py2 text-sky-600 rounded-lg font-medium hover:bg-sky-100">
+                                            <Link to="/">Contact</Link>
+                                        </NavigationMenuLink>
+                                    </NavigationMenuItem> */}
+                                    <Separator className="my-4"/>
+                                    <NavigationMenuItem>
+                                        <NavigationMenuLink asChild className="bg-none px-4 py2 text-neutral-600 rounded-lg font-medium hover:bg-neutral-100">
+                                            <Link to="https://github.com/Li-Zhi-4" target="_blank" rel="noopener noreferrer" className="flex flex-row items-center">
+                                                GitHub
+                                                <ExternalLink className="text-sky-blue" />
+                                            </Link>
+                                        </NavigationMenuLink>
+                                    </NavigationMenuItem>
+                                    <NavigationMenuItem>
+                                        <NavigationMenuLink asChild className="bg-none px-4 py2 text-neutral-600 rounded-lg font-medium hover:bg-neutral-100">
+                                            <Link to="https://www.linkedin.com/in/sara-thompson-s44/" target="_blank" rel="noopener noreferrer" className="flex flex-row items-center">
+                                                LinkedIn
+                                                <ExternalLink className="text-sky-blue" />
+                                            </Link>
+                                        </NavigationMenuLink>
+                                    </NavigationMenuItem>
+                                </NavigationMenuList>
+                        </NavigationMenu>
+                        </SheetHeader>
+                    </SheetContent>
                     </Sheet>
                 </div>
 

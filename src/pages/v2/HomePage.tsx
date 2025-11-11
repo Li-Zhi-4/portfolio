@@ -6,11 +6,15 @@ import { InfoBlock } from "@/components/v2/InfoBlock";
 import ContactMe from "@/components/v2/ContactMe";
 import Footer from "@/components/v2/Footer";
 import NavigationBar from "@/components/v2/NavigationBar";
+import Announcement from "@/components/v2/Announcement";
 
 // images
 import leavoda from "/public/leavoda-logo.svg";
 import waterloo from "/public/university-of-waterloo.png";
 import compass from "/public/compass.svg";
+
+// data
+import { PROJECTS } from "@/data/projects";
 
 
 export function HomePage() {
@@ -20,7 +24,9 @@ export function HomePage() {
             <NavigationBar />
 
             <Hero
-                sectionLabel="Product Designer • Systems Engineer • UX Researcher"
+                useBadge={true}
+                sectionLabel="Currently updating my portfolio. Some case studies still have the previous design."
+                // sectionLabel="Product Designer • Systems Engineer • UX Researcher"
                 title={
                     <>
                         Part designer, part engineer, <br />
@@ -30,15 +36,15 @@ export function HomePage() {
                 description="I’m a product owner and engineer combining design thinking with code to create seamless, human-centered digital products."
             />
 
-            <SectionHeader title="Case Studies" linkTitle="See all" />
+            <SectionHeader title="Case Studies" linkTitle="See all" href="/portfolio" />
 
             <Section
-                subtitle="Leavoda • present"
-                title="Designing the Identity of a Field Service Management Platform"
-                description="Leading the redesign of a startup’s FSM platform, transforming its interface and user experience into a clean, modern foundation for future innovation."
-                badges={["Full Stack", "UX Design", "UX Research"]}
+                subtitle={PROJECTS["leavoda"].subtitle}
+                title={PROJECTS["leavoda"].title}
+                description={PROJECTS["leavoda"].description}
+                badges={PROJECTS["leavoda"].badges}
 
-                buttonTitle="Read more"
+                buttonTitle={PROJECTS["leavoda"].buttonTitle}
                 spacing="mt-8"
             >
                 <div className="flex justify-center items-center bg-neutral-50 w-full h-full rounded-lg bg-radial from-[#FFF5EE] from-40% to-[]">
@@ -47,28 +53,33 @@ export function HomePage() {
             </Section>
 
             <Section
-                subtitle="Research • 2025"
-                title="Investigating Critical Decision-Making Processes Among Rural Patients"
-                description="Examined the decision-making process of rural patients seeking urgent medical care to assess disparities in access compared to urban populations."
-                badges={["Product Management", "UX Research", "Academic Research"]}
+                subtitle={PROJECTS["uwaterloo-rural-health"].subtitle}
+                title={PROJECTS["uwaterloo-rural-health"].title}
+                description={PROJECTS["uwaterloo-rural-health"].description}
+                badges={PROJECTS["uwaterloo-rural-health"].badges}
 
-                buttonTitle="Read more"
+                linkTitle={PROJECTS["uwaterloo-rural-health"].linkTitle}
+                href={PROJECTS["uwaterloo-rural-health"].href}
+                icon={PROJECTS["uwaterloo-rural-health"].icon as "download" | "arrow"}
                 spacing="mt-8"
 
                 order="first"
             >
-                <div className="flex justify-center items-center bg-neutral-50 w-full h-full rounded-lg bg-radial from-[#FFF5EE] from-40% to-[]">
-                    <img src={leavoda} alt="" />
+                <div className="flex justify-center items-center bg-neutral-50 w-full h-full rounded-lg bg-radial from-[#F5EEDC] from-40% to-[]">
+                    <img src={waterloo} alt="" />
                 </div>
             </Section>
 
             <Section
-                title="Product Design and Development of a Personalized Women’s Health Tool"
-                subtitle="Research • 2024-2025"
-                description="Designed and developed a personalized women’s health journal through every phase of product design lifecycle, from user research to final production."
-                badges={["Product Management", "UX Design", "UX Research"]}
+                title={PROJECTS["uwaterloo-womens-health"].title}
+                subtitle={PROJECTS["uwaterloo-womens-health"].subtitle}
+                description={PROJECTS["uwaterloo-womens-health"].description}
+                badges={PROJECTS["uwaterloo-womens-health"].badges}
                 
-                buttonTitle="Read more"
+                buttonTitle={PROJECTS["uwaterloo-womens-health"].buttonTitle}
+                to={PROJECTS["uwaterloo-womens-health"].to}
+                linkTitle={PROJECTS["uwaterloo-womens-health"].linkTitle}
+                href={PROJECTS["uwaterloo-womens-health"].href}
                 spacing="mt-8"
             >
                 <div className="flex justify-center items-center bg-neutral-50 w-full h-full rounded-lg bg-radial from-[#F5F3FF] from-40% to-[]">
@@ -77,12 +88,13 @@ export function HomePage() {
             </Section>
 
             <Section
-                title="Transforming Pre-Qualifications: From Manual Process to Digital Workflow"
-                subtitle="Bespoke Metrics • 2023"
-                description="Digitized the general contractor qualification process, improving efficiency, compliance, and user experience for faster approval and data management."
-                badges={["Product Management", "UX Design"]}
+                title={PROJECTS["bespoke-metrics-qualifications"].title}
+                subtitle={PROJECTS["bespoke-metrics-qualifications"].subtitle}
+                description={PROJECTS["bespoke-metrics-qualifications"].description}
+                badges={PROJECTS["bespoke-metrics-qualifications"].badges}
                 
-                buttonTitle="Read more"
+                buttonTitle={PROJECTS["bespoke-metrics-qualifications"].buttonTitle}
+                to={PROJECTS["bespoke-metrics-qualifications"].to}
                 spacing="mt-8"
 
                 order="first"
@@ -96,13 +108,15 @@ export function HomePage() {
             <SectionHeader title="Engineering" linkTitle="See all" />
 
             <Section
-                title="Engineering the Next-Gen Biosensor for Personalized Antidepressant Therapy"
-                subtitle="Capstone • 2023-2024"
-                description="Built a novel electrochemical biosensor for the detection of genetic mutations affecting the uptake of certain antidepressant medication drugs."
-                badges={["Product Management", "Academic Research", "Biosensors"]}
+                title={PROJECTS["capstone"].title}
+                subtitle={PROJECTS["capstone"].subtitle}
+                description={PROJECTS["capstone"].description}
+                badges={PROJECTS["capstone"].badges}
                 
-                buttonTitle="Read more"
-                linkTitle="Capstone Team wins Esch Compeition"
+                buttonTitle={PROJECTS["capstone"].buttonTitle}
+                to={PROJECTS["capstone"].to}
+                linkTitle={PROJECTS["capstone"].linkTitle}
+                href={PROJECTS["capstone"].href}
                 spacing="mt-8"
 
                 order="first"
@@ -113,29 +127,29 @@ export function HomePage() {
                 </div>
             </Section>
 
-            <SectionGrid borderB={true}>
+            <SectionGrid borderB={true} divide="divide-y lg:divide-y-0 lg:divide-x" >
                 <InfoBlock
-                    title="Novel Carbon Quantum Dot Antifouling Coating Aiding Detection of Breast Cancer Biomarkers"
-                    subtitle="Research • 2024"
-                    description="Designed a novel electrochemical biosensor utilizing a new antifouling technique to enhance sensor detection limits and ensure reliability in the realm of point-of-care (POC) health diagnostics."
-                    badges={["Academic Research", "Biosensors"]}
+                    title={PROJECTS["uwaterloo-qd-biosensor"].title}
+                    subtitle={PROJECTS["uwaterloo-qd-biosensor"].subtitle}
+                    description={PROJECTS["uwaterloo-qd-biosensor"].description}
+                    badges={PROJECTS["uwaterloo-qd-biosensor"].badges}
 
-                    buttonTitle="Read more"
-                    linkTitle="See paper"
-                    icon="download"
+                    linkTitle={PROJECTS["uwaterloo-qd-biosensor"].linkTitle}
+                    href={PROJECTS["uwaterloo-qd-biosensor"].href}
+                    icon={PROJECTS["uwaterloo-qd-biosensor"].icon as "download" | "arrow"}
                     spacing="mt-8"
 
                     padding={true}
                 />
                 <InfoBlock
-                    title="Socioeconomic Analysis of Confirmed COVID-19 Cases Across Rural and Urban Regions in Ontario"
-                    subtitle="Research • 2025"
-                    description="Analyzed COVID-19 incidence rates across Ontario to assess how income influences infection patterns and compared public health regions to identify key socioeconomic factors associated with outcomes."
-                    badges={["Academic Research", "Statistical Analysis"]}
+                    title={PROJECTS["uwaterloo-covid"].title}
+                    subtitle={PROJECTS["uwaterloo-covid"].subtitle}
+                    description={PROJECTS["uwaterloo-covid"].description}
+                    badges={PROJECTS["uwaterloo-covid"].badges}
 
-                    buttonTitle="Read more"
-                    linkTitle="See paper"
-                    icon="download"
+                    linkTitle={PROJECTS["uwaterloo-covid"].linkTitle}
+                    href={PROJECTS["uwaterloo-covid"].href}
+                    icon={PROJECTS["uwaterloo-covid"].icon as "download" | "arrow"}
                     spacing="mt-8"
 
                     padding={true}
@@ -143,14 +157,14 @@ export function HomePage() {
             </SectionGrid>
 
             <Section
-                title="Analyzing User Perception and Consumer Decision-Making to Strategic User Interface Design Patterns in Shopping Applications"
-                subtitle="Research • 2021"
-                description="Examined users’ (n = 1,116) susceptibility and perception of strategic design elements in shopping applications and how these design patterns influenced users’ decision-making and purchase intent."
-                badges={["UX Research", "Academic Research", "Statistical Analysis"]}
+                title={PROJECTS["uwaterloo-ux"].title}
+                subtitle={PROJECTS["uwaterloo-ux"].subtitle}
+                description={PROJECTS["uwaterloo-ux"].description}
+                badges={PROJECTS["uwaterloo-ux"].badges}
                 
-                buttonTitle="Read more"
-                linkTitle="See paper"
-                icon="download"
+                linkTitle={PROJECTS["uwaterloo-ux"].linkTitle}
+                href={PROJECTS["uwaterloo-ux"].href}
+                icon={PROJECTS["uwaterloo-ux"].icon as "download" | "arrow"}
                 spacing="mt-8"
 
                 order="first"

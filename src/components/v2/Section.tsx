@@ -15,6 +15,7 @@ interface SectionProps {
     icon?: "arrow" | "download";
     spacing?: string;
     href?: string;
+    to?: string;
 
     flexDir?: "flex-col" | "flex-row";
     order?: "first" | "second";
@@ -35,6 +36,7 @@ function Section({
     icon="arrow",
     href, 
     spacing, 
+    to,
     
     flexDir="flex-row",         // determines flex direction of content
     order="second",             // determines order of image and content
@@ -61,6 +63,7 @@ function Section({
                         spacing={spacing}
                         href={href}
                         icon={icon}
+                        to={to}
                     />
                 </div>
 
@@ -77,9 +80,9 @@ interface SectionGridProps {
 
     fullBorder?: boolean;
     borderB?: boolean;
-    dividex?: boolean;
-    dividey?: boolean;
+    divide?: string;
     columns?: string;
+    py?: string;
 }
 
 function SectionGrid({
@@ -89,14 +92,14 @@ function SectionGrid({
     
     fullBorder,                 // displays full y-axis borders
     borderB,                    // displays bottom border of inner content
-    dividex=true,               // displays vertical separators (should always be true)
-    dividey=false,              // displays horizontal separators (only true for >2 items)
-    columns="lg:grid-cols-2"
+    divide,               // displays vertical separators (should always be true)
+    columns="lg:grid-cols-2",
+    py=""
 }: SectionGridProps) {
 
     return (
-        <Content fullWidth={false} fullBorder={fullBorder} borderB={borderB} px="" py="" className={className}>
-            <div className={`grid ${columns} grid-cols-1 ${dividex ? "divide-x" : null} ${dividey ? "divide-y" : null} divide-neutral-200 items-start text-start box-border ${styles}`}>
+        <Content fullWidth={false} fullBorder={fullBorder} borderB={borderB} px="" py={py} className={className}>
+            <div className={`grid ${columns} grid-cols-1 ${divide} divide-neutral-200 items-start text-start box-border ${styles}`}>
                 {children}
             </div>
         </Content>

@@ -20,6 +20,9 @@ import {
 // icons
 import { Search } from "lucide-react";
 
+// data
+import { PROJECTS, PROJECTS_LIST } from "@/data/projects";
+
 const PORTFOLIO = [
     {
         subtitle: "Leavoda • present",
@@ -106,7 +109,7 @@ const PORTFOLIO = [
 export function PortfolioPage() {
     const [query, setQuery] = useState("");
 
-    const filtered = PORTFOLIO.filter((item) => {
+    const filtered = PROJECTS_LIST.filter((item) => {
         const q = query.toLowerCase();
 
         return (
@@ -150,7 +153,7 @@ export function PortfolioPage() {
 
             {filtered.length > 0 ?
                 (
-                    <SectionGrid borderB={false} dividey={true} styles="[&>*:nth-last-child(2)]:border-b-0">
+                    <SectionGrid borderB={false} divide="divide-y divide-x" styles="[&>*:nth-child(2n)]:border-r-0 [&>*:nth-last-child(-n+2)]:border-b-0" >
                         {filtered.map((item, idx) => (
                             <InfoBlock
                                 key={idx}
@@ -160,7 +163,9 @@ export function PortfolioPage() {
                                 badges={item.badges}
 
                                 buttonTitle={item.buttonTitle}
+                                to={item.to}
                                 linkTitle={item.linkTitle}
+                                href={item.href}
                                 icon={item.icon === "download" || item.icon === "arrow" ? item.icon : undefined}
                                 spacing="mt-8"
 

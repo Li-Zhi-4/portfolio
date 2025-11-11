@@ -1,10 +1,11 @@
 // import { HomePage } from "@/pages/HomePage";
 // import { PortfolioPage } from "@/pages/PortfolioPage";
-import { AboutPage } from "@/pages/AboutPage";
+// import { AboutPage } from "@/pages/AboutPage";
 
 // v2
 import { HomePage } from "@/pages/v2/HomePage";
 import { PortfolioPage } from "@/pages/v2/PortfolioPage";
+import { AboutPage } from "@/pages/v2/AboutPage";
 
 // Projects
 import { QualificationWorkflows } from "@/projects/QualificationWorkflows";
