@@ -79,6 +79,8 @@ export function HomePage() {
                 to={PROJECTS["uwaterloo-womens-health"].to}
                 linkTitle={PROJECTS["uwaterloo-womens-health"].linkTitle}
                 href={PROJECTS["uwaterloo-womens-health"].href}
+                icon={PROJECTS["uwaterloo-womens-health"].icon as "download" | "arrow"}
+
                 spacing="mt-8"
             >
                 <div className="flex justify-center items-center bg-neutral-50 w-full h-full rounded-lg bg-radial from-[#F5F3FF] from-40% to-[]">
