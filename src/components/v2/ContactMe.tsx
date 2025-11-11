@@ -1,7 +1,6 @@
 // components
 import { Content } from "./Content"
 import { Button } from "../ui/button"
-import { Link } from "react-router-dom"
 
 // icons
 import { ArrowRight } from "lucide-react"

@@ -6,7 +6,6 @@ import { InfoBlock } from "@/components/v2/InfoBlock";
 import ContactMe from "@/components/v2/ContactMe";
 import Footer from "@/components/v2/Footer";
 import NavigationBar from "@/components/v2/NavigationBar";
-import Announcement from "@/components/v2/Announcement";
 
 // images
 import leavoda from "/public/leavoda-logo.svg";

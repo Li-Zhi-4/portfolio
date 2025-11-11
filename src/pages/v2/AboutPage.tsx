@@ -1,8 +1,6 @@
 
 // components
-import { Hero } from "@/components/v2/Hero";
-import { SectionHeader } from "@/components/v2/SectionHeader";
-import { Section, SectionGrid } from "@/components/v2/Section";
+import { SectionGrid } from "@/components/v2/Section";
 import { InfoBlock } from "@/components/v2/InfoBlock";
 import ContactMe from "@/components/v2/ContactMe";
 import Footer from "@/components/v2/Footer";

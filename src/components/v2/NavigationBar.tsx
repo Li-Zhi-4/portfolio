@@ -1,19 +1,14 @@
 // components
 import {
     NavigationMenu,
-    NavigationMenuContent,
-    NavigationMenuIndicator,
     NavigationMenuItem,
     NavigationMenuLink,
     NavigationMenuList,
-    NavigationMenuTrigger,
-    NavigationMenuViewport,
     navigationMenuTriggerStyle
 } from "@/components/ui/navigation-menu"
 import {
     Sheet,
     SheetContent,
-    SheetDescription,
     SheetHeader,
     SheetTitle,
     SheetTrigger,
@@ -25,10 +20,7 @@ import { Separator } from "../ui/separator"
 
 // icons
 import logo from "/public/Benzene.svg"
-// import { GitH } from "lucide-react"
-// import { Linkedin } from "lucide-react"
-// import { Sun } from "lucide-react"
-import { Github, Linkedin, Menu, ExternalLink, Home } from "lucide-react"
+import { Github, Linkedin, Menu, ExternalLink } from "lucide-react"
 
 
 const LINKS = [
