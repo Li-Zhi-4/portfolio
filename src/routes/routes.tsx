@@ -8,9 +8,12 @@ import { PortfolioPage } from "@/pages/v2/PortfolioPage";
 import { AboutPage } from "@/pages/v2/AboutPage";
 
 // Projects
-import { QualificationWorkflows } from "@/projects/QualificationWorkflows";
-import { CustomForms } from "@/projects/CustomForms";
-import { GeneDetek } from "@/projects/GeneDetek";
+// import { QualificationWorkflows } from "@/projects/QualificationWorkflows";
+// import { GeneDetek } from "@/projects/GeneDetek";
+// import { CustomForms } from "@/projects/CustomForms";
+import QualificationWorkflows from "@/projects/QualificationWorkflows";
+import GeneDetek from "@/projects/GeneDetek";
+import CustomForms from "@/projects/CustomForms";
 
 export const routes = [
     { path: "/",            element: <HomePage />},

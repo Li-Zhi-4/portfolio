@@ -18,7 +18,7 @@ import passFailModals from '/src/assets/QW-pass-fail-modals.svg'
 import qualificationModals from '/src/assets/QW-qualification-modals.svg'
 
 
-export function QualificationWorkflows() {
+export default function QualificationWorkflows() {
     const IMGLIST1 = {
         "Flyouts for Reviewer Replacement and Creating Review Groups": reviewerReplacement,
         "Workflow Groups Management": qualificationManagement,

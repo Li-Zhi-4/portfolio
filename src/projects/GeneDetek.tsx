@@ -29,7 +29,7 @@ import calibration from '/src/assets/GD-calibration.svg'
 import future from '/src/assets/GD-future.svg'
 import genedetek from '/src/assets/genedetek.jpg'
 
-export function GeneDetek() {
+export default function GeneDetek() {
     const IMGLIST1 = {
         "The wild-type allele (above) and its complementary sequence (below).": CYP2C19,
         "Potential HPP secondary structures. Secondary structures are outlined in red with the SNP and flanking base pair on either side highlighted in yellow. 50 flanking nucleotides on either side of the SNP are displayed and retrieved from the NCBI SNP databank.": HPP1,

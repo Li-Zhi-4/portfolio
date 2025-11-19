@@ -14,7 +14,7 @@ import formManagementAppearance from '/src/assets/CF-management-appearance.svg'
 import questions from '/src/assets/CF-question-appearance.svg'
 
 
-export function CustomForms() {
+export default function CustomForms() {
     const IMGLIST1 = {
         "Custom Forms Management for General Contractors": generalContractor,
         "Custom Forms Management for Subcontractors": subcontractor
