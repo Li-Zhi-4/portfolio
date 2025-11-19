@@ -96,9 +96,9 @@ export function HomePage() {
                 badges={PROJECTS["bespoke-metrics-qualifications"].badges}
                 
                 buttonTitle={PROJECTS["bespoke-metrics-qualifications"].buttonTitle}
-                to={PROJECTS["bespoke-metrics-qualifications"].to}
+                to={PROJECTS["bespoke-metrics-qualifications"].href}
                 linkTitle={PROJECTS["bespoke-metrics-qualifications"].linkTitle}
-                href={PROJECTS["bespoke-metrics-qualifications"].href}
+                href={PROJECTS["bespoke-metrics-qualifications"].to}
                 spacing="mt-8"
 
                 order="first"
