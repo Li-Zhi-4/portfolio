@@ -97,6 +97,8 @@ export function HomePage() {
                 
                 buttonTitle={PROJECTS["bespoke-metrics-qualifications"].buttonTitle}
                 to={PROJECTS["bespoke-metrics-qualifications"].to}
+                linkTitle={PROJECTS["bespoke-metrics-qualifications"].linkTitle}
+                href={PROJECTS["bespoke-metrics-qualifications"].href}
                 spacing="mt-8"
 
                 order="first"
