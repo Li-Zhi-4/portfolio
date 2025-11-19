@@ -10,7 +10,7 @@ interface SectionHeaderProps {
     href?: string;
 }
 
-function SectionHeader({ children, title, linkTitle, href="#" }: SectionHeaderProps) {
+function SectionHeader({ children, title, linkTitle, href }: SectionHeaderProps) {
 
     return (
         <Content fullBorder={true} borderB={false} fullWidth={false} bg="bg-neutral-50">

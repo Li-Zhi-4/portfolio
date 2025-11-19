@@ -35,7 +35,8 @@ export function HomePage() {
                 description="I’m a product owner and engineer combining design thinking with code to create seamless, human-centered digital products."
             />
 
-            <SectionHeader title="Case Studies" linkTitle="See all" href="/portfolio" />
+            {/* <SectionHeader title="Case Studies" linkTitle="See all" href="/portfolio" /> */}
+            <SectionHeader title="Case Studies" />
 
             <Section
                 subtitle={PROJECTS["leavoda"].subtitle}
@@ -106,7 +107,7 @@ export function HomePage() {
                 </div>
             </Section>
             
-            <SectionHeader title="Engineering" linkTitle="See all" />
+            <SectionHeader title="Engineering" />
 
             <Section
                 title={PROJECTS["capstone"].title}
