@@ -96,12 +96,30 @@ export function HomePage() {
                 badges={PROJECTS["bespoke-metrics-qualifications"].badges}
                 
                 buttonTitle={PROJECTS["bespoke-metrics-qualifications"].buttonTitle}
-                to={PROJECTS["bespoke-metrics-qualifications"].href}
-                linkTitle={PROJECTS["bespoke-metrics-qualifications"].linkTitle}
-                href={PROJECTS["bespoke-metrics-qualifications"].to}
+                to={PROJECTS["bespoke-metrics-qualifications"].to}
+                // linkTitle={PROJECTS["bespoke-metrics-qualifications"].linkTitle}
+                // href={PROJECTS["bespoke-metrics-qualifications"].to}
                 spacing="mt-8"
 
                 order="first"
+                // borderB={false}
+            >
+                <div className="flex justify-center items-center bg-neutral-50 w-full h-full rounded-lg bg-radial from-[#DEDFE1] from-40% to-[]">
+                    <img src={compass} alt="" className="w-[80%]"/>
+                </div>
+            </Section>
+
+            <Section
+                title="Redesigning Custom Forms for General Contractors"
+                subtitle={PROJECTS["bespoke-metrics-qualifications"].subtitle}
+                description="Designing the core foundation of a custom form feature for general contractors to protect their data privacy and improve user experience."
+                badges={PROJECTS["bespoke-metrics-qualifications"].badges}
+                
+                buttonTitle={PROJECTS["bespoke-metrics-qualifications"].buttonTitle}
+                to={PROJECTS["bespoke-metrics-qualifications"].href}
+                spacing="mt-8"
+
+                // order="first"
                 borderB={false}
             >
                 <div className="flex justify-center items-center bg-neutral-50 w-full h-full rounded-lg bg-radial from-[#DEDFE1] from-40% to-[]">
